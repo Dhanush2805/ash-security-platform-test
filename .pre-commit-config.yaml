@@ -1,0 +1,8 @@
+repos:
+  - repo: https://github.com/your-org/ash-security-platform
+    rev: v1.0.0
+
+    hooks:
+      - id: ash-pre-commit
+
+      - id: ash-pre-push
