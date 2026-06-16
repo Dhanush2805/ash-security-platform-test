@@ -1,5 +1,5 @@
 repos:
-  - repo: https://github.com/your-org/ash-security-platform
+  - repo: https://github.com/Dhanush2805/ash-security-platform
     rev: v1.0.0
 
     hooks:
