@@ -1,0 +1,10 @@
+name: Security Scan
+
+on:
+  pull_request:
+    branches:
+      - ash-poc
+
+jobs:
+  ash_scan:
+    uses: Dhanush2805/ash-security-platform/.github/workflows/ash-scan.yml@v1
