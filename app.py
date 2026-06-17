@@ -1,1 +1,1 @@
-API_KEY = "hardcoded_secret"
+print('success')
