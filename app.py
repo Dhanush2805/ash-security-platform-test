@@ -4,14 +4,8 @@ print('success')
 print('success')
 
 
-<<<<<<< HEAD
-import requests
+app = Flask(__name__)
 
-requests.get(
-    "https://example.com",
-    verify=False
-)
-=======
-from flask import request
-name = request.args["name"]
->>>>>>> b4e6869 (Testing ASH)
+@app.route("/test")
+def test():
+    return request.args.get("cmd")
