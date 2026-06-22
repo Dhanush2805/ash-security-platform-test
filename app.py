@@ -4,11 +4,10 @@ print('success')
 print('success')
 
 
-import flask
-from flask import request
+from flask import Flask, request
 
-app = flask.Flask(__name__)
+app = Flask(__name__)
 
-@app.route("/user")
-def user():
-    return request.args["name"]
+@app.route("/test")
+def test():
+    return request.args.get("cmd")
