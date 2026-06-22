@@ -4,10 +4,9 @@ print('success')
 print('success')
 
 
-from flask import Flask, request
+import requests
 
-app = Flask(__name__)
-
-@app.route("/test")
-def test():
-    return request.args.get("cmd")
+requests.get(
+    "https://example.com",
+    verify=False
+)
