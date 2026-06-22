@@ -3,9 +3,9 @@ print('success')
 print('success')
 print('success')
 
+import jwt
 
-app = Flask(__name__)
-
-@app.route("/test")
-def test():
-    return request.args.get("cmd")
+token = jwt.decode(
+    token_string,
+    options={"verify_signature": False}
+)
