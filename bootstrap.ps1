@@ -20,31 +20,33 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 # ==========================================
-# Create sample package.json (only if missing)
+# Install Node Dependencies (all Node projects)
 # ==========================================
 
-if (!(Test-Path "package.json")) {
+Write-Host "Searching for package.json files..."
 
-@"
-{
-  "name": "ash-security-platform-test",
-  "version": "1.0.0",
-  "dependencies": {
-    "lodash": "4.17.11"
-  }
-}
-"@ | Out-File -Encoding utf8 package.json
+Get-ChildItem -Recurse -Filter package.json | ForEach-Object {
 
-}
+    Write-Host ""
+    Write-Host "Found Node project:"
+    Write-Host $_.DirectoryName
 
-# ==========================================
-# Generate package-lock.json
-# ==========================================
+    Push-Location $_.DirectoryName
 
-if (!(Test-Path "package-lock.json")) {
+    Write-Host "Running npm install..."
 
-    Write-Host "Generating package-lock.json..."
-    npm install --package-lock-only
+    npm install
+
+    if ($LASTEXITCODE -ne 0) {
+
+        Write-Host "ERROR: npm install failed in $($_.DirectoryName)"
+
+        Pop-Location
+        exit 1
+
+    }
+
+    Pop-Location
 
 }
 
