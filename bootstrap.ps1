@@ -20,6 +20,25 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 # ==========================================
+# Verify Docker (Optional)
+# ==========================================
+
+docker --version
+
+if ($LASTEXITCODE -eq 0) {
+
+    Write-Host "Docker detected"
+    Write-Host "Container image scanning available"
+
+}
+else {
+
+    Write-Host "Docker not detected"
+    Write-Host "Container image scanning will be skipped"
+
+}
+
+# ==========================================
 # Install Node Dependencies (all Node projects)
 # ==========================================
 
