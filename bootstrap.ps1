@@ -9,6 +9,34 @@ pip install git+https://github.com/awslabs/automated-security-helper.git@v3.5.4
 pip install semgrep
 
 # ==========================================
+# Install CDK-NAG Dependencies
+# ==========================================
+
+Write-Host "Installing CDK-NAG dependencies..."
+
+pip install cdk-nag aws-cdk-lib constructs
+
+if ($LASTEXITCODE -ne 0) {
+
+    Write-Host "ERROR: Failed to install CDK-NAG dependencies"
+    exit 1
+
+}
+
+Write-Host "Validating CDK-NAG installation..."
+
+python -c "import cdk_nag; import aws_cdk; import constructs"
+
+if ($LASTEXITCODE -ne 0) {
+
+    Write-Host "ERROR: CDK-NAG validation failed"
+    exit 1
+
+}
+
+Write-Host "CDK-NAG dependencies installed successfully"
+
+# ==========================================
 # Verify npm
 # ==========================================
 
