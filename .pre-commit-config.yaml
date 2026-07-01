@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/Dhanush2805/ash-security-platform
-    rev: v1.0.21
+    rev: v1.0.22
 
     hooks:
       - id: ash-pre-commit
