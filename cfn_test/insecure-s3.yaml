@@ -1,23 +1,24 @@
 AWSTemplateFormatVersion: '2010-09-09'
 
 Resources:
-
-  BadBucket:
-    Type: AWS::S3::Bucket
+  MyTopic:
+    Type: AWS::SNS::Topic
     Properties:
-      BucketEncryption:
-        ServerSideEncryptionConfiguration: []
+      KmsMasterKeyId: alias/aws/sns
 
-  BadBucketPolicy:
-    Type: AWS::S3::BucketPolicy
+  MyTopicPolicy:
+    Type: AWS::SNS::TopicPolicy
     Properties:
-      Bucket: !Ref BadBucket
+      Topics:
+        - !Ref MyTopic
       PolicyDocument:
-        Version: "2012-10-17"
+        Version: '2012-10-17'
         Statement:
-          - Effect: Allow
+          - Sid: AllowOnlySSL
+            Effect: Deny
             Principal: "*"
-            Action: "s3:*"
-            Resource:
-              - !GetAtt BadBucket.Arn
-              - !Sub "${BadBucket.Arn}/*"
+            Action: "SNS:Publish"
+            Resource: !Ref MyTopic
+            Condition:
+              Bool:
+                aws:SecureTransport: false
