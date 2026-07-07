@@ -9,9 +9,7 @@ print('success')
 print('success')
 print('success')
 
-import subprocess
+import hashlib
 
-cmd = input("Enter command: ")
-subprocess.run(cmd, shell=True)
-
+hashlib.md5(b"password").hexdigest()
 
