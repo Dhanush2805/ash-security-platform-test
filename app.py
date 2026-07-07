@@ -10,9 +10,7 @@ print('success')
 print('success')
 
 
-import hashlib
+import socket
 
-hashlib.md5(b"password").hexdigest()
-
-AWS_ACCESS_KEY_ID = "AKIAIOSFODNN7EXAMPLE"
-AWS_SECRET_ACCESS_KEY = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+s = socket.socket()
+s.bind(("0.0.0.0", 8080))
