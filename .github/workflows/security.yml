@@ -15,4 +15,4 @@ permissions:
 
 jobs:
   ash_scan:
-    uses: Dhanush2805/ash-security-platform/.github/workflows/ash-scan.yml@v1.0.33
+    uses: Dhanush2805/ash-security-platform/.github/workflows/ash-scan.yml@v1.0.34
