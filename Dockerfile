@@ -1,3 +1,3 @@
-FROM ubuntu:latest
-
-USER root
+# FROM ubuntu:latest
+#
+# USER root
