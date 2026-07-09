@@ -364,7 +364,7 @@ Detects:
 
 ---
 
-##🛡️ Container Security
+##🛡️Container Security
 
 ### Scanner
 
