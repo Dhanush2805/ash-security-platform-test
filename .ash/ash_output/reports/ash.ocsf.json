@@ -6,12 +6,12 @@
     "category_uid": 2,
     "class_uid": 2002,
     "finding_info": {
-      "desc": "Use of possibly insecure function - consider using safer ast.literal_eval.",
-      "title": "B307 in app.py - Use of possibly insecure function - consider using safer ast.literal_eval.",
-      "uid": "e71a5576-1aab-46f7-baf9-562f58b1cc67"
+      "desc": "The S3 Bucket has server access logs disabled.\n\nException Reason: N/A",
+      "title": "AwsSolutions-S1 in insecure-s3.yaml - The S3 Bucket has server access logs disabled.\n\nException Reason: N/A",
+      "uid": "38efd8ce-bc31-43b5-81dd-b058b0bd32d8"
     },
     "metadata": {
-      "logged_time": 1783414239338,
+      "logged_time": 1783615632857,
       "product": {
         "name": "Automated Security Helper",
         "vendor_name": "Amazon Web Services",
@@ -22,28 +22,28 @@
     "severity_id": 4,
     "status": "New",
     "status_id": 1,
-    "time": 1783414239338,
+    "time": 1783615632857,
     "type_uid": 200201,
     "vulnerabilities": [
       {
         "affected_code": [
           {
-            "end_line": 12,
+            "end_line": 5,
             "file": {
-              "name": "app.py",
-              "path": "/D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/app.py",
+              "name": "insecure-s3.yaml",
+              "path": "cfn_test/insecure-s3.yaml",
               "type_id": 1
             },
-            "start_line": 12
+            "start_line": 5
           }
         ],
         "cve": {
-          "desc": "Use of possibly insecure function - consider using safer ast.literal_eval.",
-          "uid": "B307"
+          "desc": "The S3 Bucket has server access logs disabled.\n\nException Reason: N/A",
+          "uid": "AwsSolutions-S1"
         },
-        "desc": "Use of possibly insecure function - consider using safer ast.literal_eval.",
+        "desc": "The S3 Bucket has server access logs disabled.\n\nException Reason: N/A",
         "severity": "ERROR",
-        "title": "B307"
+        "title": "AwsSolutions-S1"
       }
     ]
   },
@@ -54,12 +54,12 @@
     "category_uid": 2,
     "class_uid": 2002,
     "finding_info": {
-      "desc": "A high vulnerability in python package: flask, version 0.12.0 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-      "title": "GHSA-562c-5r94-xh97-flask in requirements.txt - A high vulnerability in python package: flask, version 0.12.0 was found ...",
-      "uid": "68712cb0-18fc-48ec-84b3-46e15e870c85"
+      "desc": "The S3 Bucket or bucket policy does not require requests to use SSL.\n\nException Reason: N/A",
+      "title": "AwsSolutions-S10 in insecure-s3.yaml - The S3 Bucket or bucket policy does not require requests to use SSL.\n\nException R...",
+      "uid": "6da35303-edfb-4bb7-a55d-d98265e31d86"
     },
     "metadata": {
-      "logged_time": 1783414239338,
+      "logged_time": 1783615632857,
       "product": {
         "name": "Automated Security Helper",
         "vendor_name": "Amazon Web Services",
@@ -70,28 +70,28 @@
     "severity_id": 4,
     "status": "New",
     "status_id": 1,
-    "time": 1783414239338,
+    "time": 1783615632857,
     "type_uid": 200201,
     "vulnerabilities": [
       {
         "affected_code": [
           {
-            "end_line": 1,
+            "end_line": 5,
             "file": {
-              "name": "requirements.txt",
-              "path": "requirements.txt",
+              "name": "insecure-s3.yaml",
+              "path": "cfn_test/insecure-s3.yaml",
               "type_id": 1
             },
-            "start_line": 1
+            "start_line": 5
           }
         ],
         "cve": {
-          "desc": "A high vulnerability in python package: flask, version 0.12.0 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-          "uid": "GHSA-562c-5r94-xh97-flask"
+          "desc": "The S3 Bucket or bucket policy does not require requests to use SSL.\n\nException Reason: N/A",
+          "uid": "AwsSolutions-S10"
         },
-        "desc": "A high vulnerability in python package: flask, version 0.12.0 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
+        "desc": "The S3 Bucket or bucket policy does not require requests to use SSL.\n\nException Reason: N/A",
         "severity": "ERROR",
-        "title": "GHSA-562c-5r94-xh97-flask"
+        "title": "AwsSolutions-S10"
       }
     ]
   },
@@ -102,12 +102,12 @@
     "category_uid": 2,
     "class_uid": 2002,
     "finding_info": {
-      "desc": "A high vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-      "title": "GHSA-mh33-7rrq-662w-urllib3 in requirements.txt - A high vulnerability in python package: urllib3, version 1.24 was foun...",
-      "uid": "a947cd69-4143-474f-87df-3c37b180716b"
+      "desc": "The S3 Bucket or bucket policy does not require requests to use SSL.\n\nException Reason: N/A",
+      "title": "AwsSolutions-S10 in insecure-s3.yaml - The S3 Bucket or bucket policy does not require requests to use SSL.\n\nException R...",
+      "uid": "e8cb3f26-1a7d-4ccf-9bae-a3ad3b7d33ed"
     },
     "metadata": {
-      "logged_time": 1783414239338,
+      "logged_time": 1783615632857,
       "product": {
         "name": "Automated Security Helper",
         "vendor_name": "Amazon Web Services",
@@ -118,796 +118,28 @@
     "severity_id": 4,
     "status": "New",
     "status_id": 1,
-    "time": 1783414239338,
+    "time": 1783615632857,
     "type_uid": 200201,
     "vulnerabilities": [
       {
         "affected_code": [
           {
-            "end_line": 1,
+            "end_line": 11,
             "file": {
-              "name": "requirements.txt",
-              "path": "requirements.txt",
+              "name": "insecure-s3.yaml",
+              "path": "cfn_test/insecure-s3.yaml",
               "type_id": 1
             },
-            "start_line": 1
+            "start_line": 11
           }
         ],
         "cve": {
-          "desc": "A high vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-          "uid": "GHSA-mh33-7rrq-662w-urllib3"
+          "desc": "The S3 Bucket or bucket policy does not require requests to use SSL.\n\nException Reason: N/A",
+          "uid": "AwsSolutions-S10"
         },
-        "desc": "A high vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
+        "desc": "The S3 Bucket or bucket policy does not require requests to use SSL.\n\nException Reason: N/A",
         "severity": "ERROR",
-        "title": "GHSA-mh33-7rrq-662w-urllib3"
-      }
-    ]
-  },
-  {
-    "activity_id": 1,
-    "activity_name": "Scan",
-    "category_name": "Findings",
-    "category_uid": 2,
-    "class_uid": 2002,
-    "finding_info": {
-      "desc": "A high vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-      "title": "GHSA-38jv-5279-wg99-urllib3 in requirements.txt - A high vulnerability in python package: urllib3, version 1.24 was foun...",
-      "uid": "2f283ccb-68fe-43c1-8ee3-631d2809ffca"
-    },
-    "metadata": {
-      "logged_time": 1783414239338,
-      "product": {
-        "name": "Automated Security Helper",
-        "vendor_name": "Amazon Web Services",
-        "version": "3.5.4"
-      },
-      "version": "1.1.0"
-    },
-    "severity_id": 4,
-    "status": "New",
-    "status_id": 1,
-    "time": 1783414239338,
-    "type_uid": 200201,
-    "vulnerabilities": [
-      {
-        "affected_code": [
-          {
-            "end_line": 1,
-            "file": {
-              "name": "requirements.txt",
-              "path": "requirements.txt",
-              "type_id": 1
-            },
-            "start_line": 1
-          }
-        ],
-        "cve": {
-          "desc": "A high vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-          "uid": "GHSA-38jv-5279-wg99-urllib3"
-        },
-        "desc": "A high vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-        "severity": "ERROR",
-        "title": "GHSA-38jv-5279-wg99-urllib3"
-      }
-    ]
-  },
-  {
-    "activity_id": 1,
-    "activity_name": "Scan",
-    "category_name": "Findings",
-    "category_uid": 2,
-    "class_uid": 2002,
-    "finding_info": {
-      "desc": "A high vulnerability in python package: flask, version 0.12.0 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-      "title": "GHSA-5wv5-4vpf-pj6m-flask in requirements.txt - A high vulnerability in python package: flask, version 0.12.0 was found ...",
-      "uid": "d13ab2db-e79c-4bbe-bc6e-3cb54011e3ec"
-    },
-    "metadata": {
-      "logged_time": 1783414239338,
-      "product": {
-        "name": "Automated Security Helper",
-        "vendor_name": "Amazon Web Services",
-        "version": "3.5.4"
-      },
-      "version": "1.1.0"
-    },
-    "severity_id": 4,
-    "status": "New",
-    "status_id": 1,
-    "time": 1783414239338,
-    "type_uid": 200201,
-    "vulnerabilities": [
-      {
-        "affected_code": [
-          {
-            "end_line": 1,
-            "file": {
-              "name": "requirements.txt",
-              "path": "requirements.txt",
-              "type_id": 1
-            },
-            "start_line": 1
-          }
-        ],
-        "cve": {
-          "desc": "A high vulnerability in python package: flask, version 0.12.0 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-          "uid": "GHSA-5wv5-4vpf-pj6m-flask"
-        },
-        "desc": "A high vulnerability in python package: flask, version 0.12.0 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-        "severity": "ERROR",
-        "title": "GHSA-5wv5-4vpf-pj6m-flask"
-      }
-    ]
-  },
-  {
-    "activity_id": 1,
-    "activity_name": "Scan",
-    "category_name": "Findings",
-    "category_uid": 2,
-    "class_uid": 2002,
-    "finding_info": {
-      "desc": "A medium vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-      "title": "GHSA-wqvq-5m8c-6g24-urllib3 in requirements.txt - A medium vulnerability in python package: urllib3, version 1.24 was fo...",
-      "uid": "d97f7b33-2158-4d8d-8f86-866339f29984"
-    },
-    "metadata": {
-      "logged_time": 1783414239338,
-      "product": {
-        "name": "Automated Security Helper",
-        "vendor_name": "Amazon Web Services",
-        "version": "3.5.4"
-      },
-      "version": "1.1.0"
-    },
-    "severity_id": 3,
-    "status": "New",
-    "status_id": 1,
-    "time": 1783414239338,
-    "type_uid": 200201,
-    "vulnerabilities": [
-      {
-        "affected_code": [
-          {
-            "end_line": 1,
-            "file": {
-              "name": "requirements.txt",
-              "path": "requirements.txt",
-              "type_id": 1
-            },
-            "start_line": 1
-          }
-        ],
-        "cve": {
-          "desc": "A medium vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-          "uid": "GHSA-wqvq-5m8c-6g24-urllib3"
-        },
-        "desc": "A medium vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-        "severity": "WARNING",
-        "title": "GHSA-wqvq-5m8c-6g24-urllib3"
-      }
-    ]
-  },
-  {
-    "activity_id": 1,
-    "activity_name": "Scan",
-    "category_name": "Findings",
-    "category_uid": 2,
-    "class_uid": 2002,
-    "finding_info": {
-      "desc": "A medium vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-      "title": "GHSA-r64q-w8jr-g9qp-urllib3 in requirements.txt - A medium vulnerability in python package: urllib3, version 1.24 was fo...",
-      "uid": "2e0b033e-0231-48ab-a2ad-e01137abb7ae"
-    },
-    "metadata": {
-      "logged_time": 1783414239338,
-      "product": {
-        "name": "Automated Security Helper",
-        "vendor_name": "Amazon Web Services",
-        "version": "3.5.4"
-      },
-      "version": "1.1.0"
-    },
-    "severity_id": 3,
-    "status": "New",
-    "status_id": 1,
-    "time": 1783414239338,
-    "type_uid": 200201,
-    "vulnerabilities": [
-      {
-        "affected_code": [
-          {
-            "end_line": 1,
-            "file": {
-              "name": "requirements.txt",
-              "path": "requirements.txt",
-              "type_id": 1
-            },
-            "start_line": 1
-          }
-        ],
-        "cve": {
-          "desc": "A medium vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-          "uid": "GHSA-r64q-w8jr-g9qp-urllib3"
-        },
-        "desc": "A medium vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-        "severity": "WARNING",
-        "title": "GHSA-r64q-w8jr-g9qp-urllib3"
-      }
-    ]
-  },
-  {
-    "activity_id": 1,
-    "activity_name": "Scan",
-    "category_name": "Findings",
-    "category_uid": 2,
-    "class_uid": 2002,
-    "finding_info": {
-      "desc": "A high vulnerability in python package: flask, version 0.12.0 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-      "title": "GHSA-m2qf-hxjv-5gpq-flask in requirements.txt - A high vulnerability in python package: flask, version 0.12.0 was found ...",
-      "uid": "28fa970b-4824-49e3-8e14-37df8a00c1fe"
-    },
-    "metadata": {
-      "logged_time": 1783414239338,
-      "product": {
-        "name": "Automated Security Helper",
-        "vendor_name": "Amazon Web Services",
-        "version": "3.5.4"
-      },
-      "version": "1.1.0"
-    },
-    "severity_id": 4,
-    "status": "New",
-    "status_id": 1,
-    "time": 1783414239338,
-    "type_uid": 200201,
-    "vulnerabilities": [
-      {
-        "affected_code": [
-          {
-            "end_line": 1,
-            "file": {
-              "name": "requirements.txt",
-              "path": "requirements.txt",
-              "type_id": 1
-            },
-            "start_line": 1
-          }
-        ],
-        "cve": {
-          "desc": "A high vulnerability in python package: flask, version 0.12.0 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-          "uid": "GHSA-m2qf-hxjv-5gpq-flask"
-        },
-        "desc": "A high vulnerability in python package: flask, version 0.12.0 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-        "severity": "ERROR",
-        "title": "GHSA-m2qf-hxjv-5gpq-flask"
-      }
-    ]
-  },
-  {
-    "activity_id": 1,
-    "activity_name": "Scan",
-    "category_name": "Findings",
-    "category_uid": 2,
-    "class_uid": 2002,
-    "finding_info": {
-      "desc": "A high vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-      "title": "GHSA-v845-jxx5-vc9f-urllib3 in requirements.txt - A high vulnerability in python package: urllib3, version 1.24 was foun...",
-      "uid": "71dd47a0-0085-459b-bec9-3620ba509d78"
-    },
-    "metadata": {
-      "logged_time": 1783414239338,
-      "product": {
-        "name": "Automated Security Helper",
-        "vendor_name": "Amazon Web Services",
-        "version": "3.5.4"
-      },
-      "version": "1.1.0"
-    },
-    "severity_id": 4,
-    "status": "New",
-    "status_id": 1,
-    "time": 1783414239338,
-    "type_uid": 200201,
-    "vulnerabilities": [
-      {
-        "affected_code": [
-          {
-            "end_line": 1,
-            "file": {
-              "name": "requirements.txt",
-              "path": "requirements.txt",
-              "type_id": 1
-            },
-            "start_line": 1
-          }
-        ],
-        "cve": {
-          "desc": "A high vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-          "uid": "GHSA-v845-jxx5-vc9f-urllib3"
-        },
-        "desc": "A high vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-        "severity": "ERROR",
-        "title": "GHSA-v845-jxx5-vc9f-urllib3"
-      }
-    ]
-  },
-  {
-    "activity_id": 1,
-    "activity_name": "Scan",
-    "category_name": "Findings",
-    "category_uid": 2,
-    "class_uid": 2002,
-    "finding_info": {
-      "desc": "A medium vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-      "title": "GHSA-34jh-p97f-mpxf-urllib3 in requirements.txt - A medium vulnerability in python package: urllib3, version 1.24 was fo...",
-      "uid": "16f18c7e-2d13-45d1-8cf5-0808fe684050"
-    },
-    "metadata": {
-      "logged_time": 1783414239338,
-      "product": {
-        "name": "Automated Security Helper",
-        "vendor_name": "Amazon Web Services",
-        "version": "3.5.4"
-      },
-      "version": "1.1.0"
-    },
-    "severity_id": 3,
-    "status": "New",
-    "status_id": 1,
-    "time": 1783414239338,
-    "type_uid": 200201,
-    "vulnerabilities": [
-      {
-        "affected_code": [
-          {
-            "end_line": 1,
-            "file": {
-              "name": "requirements.txt",
-              "path": "requirements.txt",
-              "type_id": 1
-            },
-            "start_line": 1
-          }
-        ],
-        "cve": {
-          "desc": "A medium vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-          "uid": "GHSA-34jh-p97f-mpxf-urllib3"
-        },
-        "desc": "A medium vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-        "severity": "WARNING",
-        "title": "GHSA-34jh-p97f-mpxf-urllib3"
-      }
-    ]
-  },
-  {
-    "activity_id": 1,
-    "activity_name": "Scan",
-    "category_name": "Findings",
-    "category_uid": 2,
-    "class_uid": 2002,
-    "finding_info": {
-      "desc": "A high vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-      "title": "GHSA-gm62-xv2j-4w53-urllib3 in requirements.txt - A high vulnerability in python package: urllib3, version 1.24 was foun...",
-      "uid": "9bf9af44-3a06-43b0-9714-4f742d2d2ba6"
-    },
-    "metadata": {
-      "logged_time": 1783414239338,
-      "product": {
-        "name": "Automated Security Helper",
-        "vendor_name": "Amazon Web Services",
-        "version": "3.5.4"
-      },
-      "version": "1.1.0"
-    },
-    "severity_id": 4,
-    "status": "New",
-    "status_id": 1,
-    "time": 1783414239338,
-    "type_uid": 200201,
-    "vulnerabilities": [
-      {
-        "affected_code": [
-          {
-            "end_line": 1,
-            "file": {
-              "name": "requirements.txt",
-              "path": "requirements.txt",
-              "type_id": 1
-            },
-            "start_line": 1
-          }
-        ],
-        "cve": {
-          "desc": "A high vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-          "uid": "GHSA-gm62-xv2j-4w53-urllib3"
-        },
-        "desc": "A high vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-        "severity": "ERROR",
-        "title": "GHSA-gm62-xv2j-4w53-urllib3"
-      }
-    ]
-  },
-  {
-    "activity_id": 1,
-    "activity_name": "Scan",
-    "category_name": "Findings",
-    "category_uid": 2,
-    "class_uid": 2002,
-    "finding_info": {
-      "desc": "A high vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-      "title": "GHSA-2xpw-w6gg-jr37-urllib3 in requirements.txt - A high vulnerability in python package: urllib3, version 1.24 was foun...",
-      "uid": "958c5e9d-841a-4fc4-8a2e-6c39f22e7785"
-    },
-    "metadata": {
-      "logged_time": 1783414239338,
-      "product": {
-        "name": "Automated Security Helper",
-        "vendor_name": "Amazon Web Services",
-        "version": "3.5.4"
-      },
-      "version": "1.1.0"
-    },
-    "severity_id": 4,
-    "status": "New",
-    "status_id": 1,
-    "time": 1783414239338,
-    "type_uid": 200201,
-    "vulnerabilities": [
-      {
-        "affected_code": [
-          {
-            "end_line": 1,
-            "file": {
-              "name": "requirements.txt",
-              "path": "requirements.txt",
-              "type_id": 1
-            },
-            "start_line": 1
-          }
-        ],
-        "cve": {
-          "desc": "A high vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-          "uid": "GHSA-2xpw-w6gg-jr37-urllib3"
-        },
-        "desc": "A high vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-        "severity": "ERROR",
-        "title": "GHSA-2xpw-w6gg-jr37-urllib3"
-      }
-    ]
-  },
-  {
-    "activity_id": 1,
-    "activity_name": "Scan",
-    "category_name": "Findings",
-    "category_uid": 2,
-    "class_uid": 2002,
-    "finding_info": {
-      "desc": "A medium vulnerability in python package: requests, version 2.32.0 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-      "title": "GHSA-9hjg-9r4m-mvj7-requests in requirements.txt - A medium vulnerability in python package: requests, version 2.32.0 wa...",
-      "uid": "e52c1667-3903-484c-b772-8a153fad3bde"
-    },
-    "metadata": {
-      "logged_time": 1783414239338,
-      "product": {
-        "name": "Automated Security Helper",
-        "vendor_name": "Amazon Web Services",
-        "version": "3.5.4"
-      },
-      "version": "1.1.0"
-    },
-    "severity_id": 3,
-    "status": "New",
-    "status_id": 1,
-    "time": 1783414239338,
-    "type_uid": 200201,
-    "vulnerabilities": [
-      {
-        "affected_code": [
-          {
-            "end_line": 1,
-            "file": {
-              "name": "requirements.txt",
-              "path": "requirements.txt",
-              "type_id": 1
-            },
-            "start_line": 1
-          }
-        ],
-        "cve": {
-          "desc": "A medium vulnerability in python package: requests, version 2.32.0 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-          "uid": "GHSA-9hjg-9r4m-mvj7-requests"
-        },
-        "desc": "A medium vulnerability in python package: requests, version 2.32.0 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-        "severity": "WARNING",
-        "title": "GHSA-9hjg-9r4m-mvj7-requests"
-      }
-    ]
-  },
-  {
-    "activity_id": 1,
-    "activity_name": "Scan",
-    "category_name": "Findings",
-    "category_uid": 2,
-    "class_uid": 2002,
-    "finding_info": {
-      "desc": "A high vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-      "title": "GHSA-qccp-gfcp-xxvc-urllib3 in requirements.txt - A high vulnerability in python package: urllib3, version 1.24 was foun...",
-      "uid": "f4eb6b44-d4fd-4de3-b60d-06f2e0288bc0"
-    },
-    "metadata": {
-      "logged_time": 1783414239338,
-      "product": {
-        "name": "Automated Security Helper",
-        "vendor_name": "Amazon Web Services",
-        "version": "3.5.4"
-      },
-      "version": "1.1.0"
-    },
-    "severity_id": 4,
-    "status": "New",
-    "status_id": 1,
-    "time": 1783414239338,
-    "type_uid": 200201,
-    "vulnerabilities": [
-      {
-        "affected_code": [
-          {
-            "end_line": 1,
-            "file": {
-              "name": "requirements.txt",
-              "path": "requirements.txt",
-              "type_id": 1
-            },
-            "start_line": 1
-          }
-        ],
-        "cve": {
-          "desc": "A high vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-          "uid": "GHSA-qccp-gfcp-xxvc-urllib3"
-        },
-        "desc": "A high vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-        "severity": "ERROR",
-        "title": "GHSA-qccp-gfcp-xxvc-urllib3"
-      }
-    ]
-  },
-  {
-    "activity_id": 1,
-    "activity_name": "Scan",
-    "category_name": "Findings",
-    "category_uid": 2,
-    "class_uid": 2002,
-    "finding_info": {
-      "desc": "A medium vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-      "title": "GHSA-gwvm-45gx-3cf8-urllib3 in requirements.txt - A medium vulnerability in python package: urllib3, version 1.24 was fo...",
-      "uid": "61cb0c4e-be25-4291-a883-19b7712ddfc7"
-    },
-    "metadata": {
-      "logged_time": 1783414239338,
-      "product": {
-        "name": "Automated Security Helper",
-        "vendor_name": "Amazon Web Services",
-        "version": "3.5.4"
-      },
-      "version": "1.1.0"
-    },
-    "severity_id": 3,
-    "status": "New",
-    "status_id": 1,
-    "time": 1783414239338,
-    "type_uid": 200201,
-    "vulnerabilities": [
-      {
-        "affected_code": [
-          {
-            "end_line": 1,
-            "file": {
-              "name": "requirements.txt",
-              "path": "requirements.txt",
-              "type_id": 1
-            },
-            "start_line": 1
-          }
-        ],
-        "cve": {
-          "desc": "A medium vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-          "uid": "GHSA-gwvm-45gx-3cf8-urllib3"
-        },
-        "desc": "A medium vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-        "severity": "WARNING",
-        "title": "GHSA-gwvm-45gx-3cf8-urllib3"
-      }
-    ]
-  },
-  {
-    "activity_id": 1,
-    "activity_name": "Scan",
-    "category_name": "Findings",
-    "category_uid": 2,
-    "class_uid": 2002,
-    "finding_info": {
-      "desc": "A medium vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-      "title": "GHSA-g4mx-q9vg-27p4-urllib3 in requirements.txt - A medium vulnerability in python package: urllib3, version 1.24 was fo...",
-      "uid": "4deb01df-a568-4088-84e3-77c867d03739"
-    },
-    "metadata": {
-      "logged_time": 1783414239338,
-      "product": {
-        "name": "Automated Security Helper",
-        "vendor_name": "Amazon Web Services",
-        "version": "3.5.4"
-      },
-      "version": "1.1.0"
-    },
-    "severity_id": 3,
-    "status": "New",
-    "status_id": 1,
-    "time": 1783414239338,
-    "type_uid": 200201,
-    "vulnerabilities": [
-      {
-        "affected_code": [
-          {
-            "end_line": 1,
-            "file": {
-              "name": "requirements.txt",
-              "path": "requirements.txt",
-              "type_id": 1
-            },
-            "start_line": 1
-          }
-        ],
-        "cve": {
-          "desc": "A medium vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-          "uid": "GHSA-g4mx-q9vg-27p4-urllib3"
-        },
-        "desc": "A medium vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-        "severity": "WARNING",
-        "title": "GHSA-g4mx-q9vg-27p4-urllib3"
-      }
-    ]
-  },
-  {
-    "activity_id": 1,
-    "activity_name": "Scan",
-    "category_name": "Findings",
-    "category_uid": 2,
-    "class_uid": 2002,
-    "finding_info": {
-      "desc": "A medium vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-      "title": "GHSA-pq67-6m6q-mj2v-urllib3 in requirements.txt - A medium vulnerability in python package: urllib3, version 1.24 was fo...",
-      "uid": "6de7fabe-aa15-41a9-af0f-7a603d793c16"
-    },
-    "metadata": {
-      "logged_time": 1783414239338,
-      "product": {
-        "name": "Automated Security Helper",
-        "vendor_name": "Amazon Web Services",
-        "version": "3.5.4"
-      },
-      "version": "1.1.0"
-    },
-    "severity_id": 3,
-    "status": "New",
-    "status_id": 1,
-    "time": 1783414239338,
-    "type_uid": 200201,
-    "vulnerabilities": [
-      {
-        "affected_code": [
-          {
-            "end_line": 1,
-            "file": {
-              "name": "requirements.txt",
-              "path": "requirements.txt",
-              "type_id": 1
-            },
-            "start_line": 1
-          }
-        ],
-        "cve": {
-          "desc": "A medium vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-          "uid": "GHSA-pq67-6m6q-mj2v-urllib3"
-        },
-        "desc": "A medium vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-        "severity": "WARNING",
-        "title": "GHSA-pq67-6m6q-mj2v-urllib3"
-      }
-    ]
-  },
-  {
-    "activity_id": 1,
-    "activity_name": "Scan",
-    "category_name": "Findings",
-    "category_uid": 2,
-    "class_uid": 2002,
-    "finding_info": {
-      "desc": "A low vulnerability in python package: flask, version 0.12.0 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-      "title": "GHSA-68rp-wp8r-4726-flask in requirements.txt - A low vulnerability in python package: flask, version 0.12.0 was found a...",
-      "uid": "7e5b7887-9ec3-43e3-9c4f-7438fd1048b8"
-    },
-    "metadata": {
-      "logged_time": 1783414239338,
-      "product": {
-        "name": "Automated Security Helper",
-        "vendor_name": "Amazon Web Services",
-        "version": "3.5.4"
-      },
-      "version": "1.1.0"
-    },
-    "severity_id": 2,
-    "status": "New",
-    "status_id": 1,
-    "time": 1783414239338,
-    "type_uid": 200201,
-    "vulnerabilities": [
-      {
-        "affected_code": [
-          {
-            "end_line": 1,
-            "file": {
-              "name": "requirements.txt",
-              "path": "requirements.txt",
-              "type_id": 1
-            },
-            "start_line": 1
-          }
-        ],
-        "cve": {
-          "desc": "A low vulnerability in python package: flask, version 0.12.0 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-          "uid": "GHSA-68rp-wp8r-4726-flask"
-        },
-        "desc": "A low vulnerability in python package: flask, version 0.12.0 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-        "severity": "NOTE",
-        "title": "GHSA-68rp-wp8r-4726-flask"
-      }
-    ]
-  },
-  {
-    "activity_id": 1,
-    "activity_name": "Scan",
-    "category_name": "Findings",
-    "category_uid": 2,
-    "class_uid": 2002,
-    "finding_info": {
-      "desc": "A medium vulnerability in python package: requests, version 2.32.0 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-      "title": "GHSA-gc5v-m9x4-r6x2-requests in requirements.txt - A medium vulnerability in python package: requests, version 2.32.0 wa...",
-      "uid": "5dcdab74-11e1-4eab-ae7b-1598ed6b90d9"
-    },
-    "metadata": {
-      "logged_time": 1783414239338,
-      "product": {
-        "name": "Automated Security Helper",
-        "vendor_name": "Amazon Web Services",
-        "version": "3.5.4"
-      },
-      "version": "1.1.0"
-    },
-    "severity_id": 3,
-    "status": "New",
-    "status_id": 1,
-    "time": 1783414239338,
-    "type_uid": 200201,
-    "vulnerabilities": [
-      {
-        "affected_code": [
-          {
-            "end_line": 1,
-            "file": {
-              "name": "requirements.txt",
-              "path": "requirements.txt",
-              "type_id": 1
-            },
-            "start_line": 1
-          }
-        ],
-        "cve": {
-          "desc": "A medium vulnerability in python package: requests, version 2.32.0 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-          "uid": "GHSA-gc5v-m9x4-r6x2-requests"
-        },
-        "desc": "A medium vulnerability in python package: requests, version 2.32.0 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\\requirements.txt",
-        "severity": "WARNING",
-        "title": "GHSA-gc5v-m9x4-r6x2-requests"
+        "title": "AwsSolutions-S10"
       }
     ]
   }

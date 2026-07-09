@@ -1,1 +1,1 @@
-{"scanner_name": "npm-audit", "target": "D:\\Dhanush\\Custom_Agents\\ash-security-platform-test\\ash-security-platform-test", "target_type": "source", "exit_code": 0, "finding_count": 0, "start_time": "2026-07-07T08:50:09.697768Z", "end_time": "2026-07-07T08:50:19.047331Z", "duration": 9.349563, "severity_counts": {"suppressed": 0, "critical": 0, "high": 0, "medium": 0, "low": 0, "info": 0}, "status": "PASSED"}
+{"scanner_name": "npm-audit", "status": "SKIPPED", "excluded": true, "raw_results": null}

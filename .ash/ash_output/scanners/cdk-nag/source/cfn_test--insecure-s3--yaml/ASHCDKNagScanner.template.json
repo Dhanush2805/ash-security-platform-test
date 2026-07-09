@@ -1,39 +1,38 @@
 {
  "AWSTemplateFormatVersion": "2010-09-09",
  "Resources": {
-  "MyTopic": {
-   "Type": "AWS::SNS::Topic",
+  "BadBucket": {
+   "Type": "AWS::S3::Bucket",
    "Properties": {
-    "KmsMasterKeyId": "alias/aws/sns"
+    "BucketEncryption": {
+     "ServerSideEncryptionConfiguration": []
+    }
    }
   },
-  "MyTopicPolicy": {
-   "Type": "AWS::SNS::TopicPolicy",
+  "BadBucketPolicy": {
+   "Type": "AWS::S3::BucketPolicy",
    "Properties": {
+    "Bucket": {
+     "Ref": "BadBucket"
+    },
     "PolicyDocument": {
      "Version": "2012-10-17",
      "Statement": [
       {
-       "Sid": "AllowOnlySSL",
-       "Effect": "Deny",
+       "Effect": "Allow",
        "Principal": "*",
-       "Action": "SNS:Publish",
-       "Resource": {
-        "Ref": "MyTopic"
-       },
-       "Condition": {
-        "Bool": {
-         "aws:SecureTransport": false
+       "Action": "s3:*",
+       "Resource": [
+        {
+         "Fn::GetAtt": "BadBucket.Arn"
+        },
+        {
+         "Fn::Sub": "${BadBucket.Arn}/*"
         }
-       }
+       ]
       }
      ]
-    },
-    "Topics": [
-     {
-      "Ref": "MyTopic"
-     }
-    ]
+    }
    }
   }
  },

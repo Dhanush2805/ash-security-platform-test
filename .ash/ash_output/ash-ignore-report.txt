@@ -1,9 +1,3 @@
-######### START CONTENTS: D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test\.gitignore #########
-.ash/
-
-node_modules/
-######### END CONTENTS: D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test\.gitignore #########
-
 ######### START CONTENTS: ASH_INCLUSIONS #########
 .git
 **/cdk.out/asset.*

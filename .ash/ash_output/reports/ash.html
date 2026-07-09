@@ -85,8 +85,8 @@
 
         <div class="metadata-section">
             <p><strong>Project:</strong> ASH</p>
-            <p><strong>Scan executed:</strong> 2026-07-07T08:49:48+00:00</p>
-            <p><strong>Report generated:</strong> 2026-07-07T08:50:38+00:00</p>
+            <p><strong>Scan executed:</strong> 2026-07-09T16:46:34+00:00</p>
+            <p><strong>Report generated:</strong> 2026-07-09T16:47:12+00:00</p>
             <p><strong>ASH version:</strong> 3.5.4</p>
         </div>
 
@@ -146,26 +146,26 @@
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
-                <td>1</td>
+                <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td><1ms</td>
-                <td class="status-failed">1</td>
-                <td class="status-failed">FAILED</td>
+                <td class="status-passed">0</td>
+                <td class="status-skipped">SKIPPED</td>
                 <td>MEDIUM (global)</td>
             </tr>
             
             <tr>
                 <td>cdk-nag</td>
                 <td>0</td>
-                <td>0</td>
+                <td>3</td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td><1ms</td>
-                <td class="status-passed">0</td>
-                <td class="status-passed">PASSED</td>
+                <td class="status-failed">3</td>
+                <td class="status-failed">FAILED</td>
                 <td>MEDIUM (global)</td>
             </tr>
             
@@ -193,7 +193,7 @@
                 <td>0</td>
                 <td><1ms</td>
                 <td class="status-passed">0</td>
-                <td class="status-passed">PASSED</td>
+                <td class="status-skipped">SKIPPED</td>
                 <td>MEDIUM (global)</td>
             </tr>
             
@@ -207,21 +207,21 @@
                 <td>0</td>
                 <td><1ms</td>
                 <td class="status-passed">0</td>
-                <td class="status-passed">PASSED</td>
+                <td class="status-skipped">SKIPPED</td>
                 <td>MEDIUM (global)</td>
             </tr>
             
             <tr>
                 <td>grype</td>
                 <td>0</td>
-                <td>9</td>
                 <td>0</td>
-                <td>8</td>
-                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
                 <td><1ms</td>
-                <td class="status-failed">17</td>
-                <td class="status-failed">FAILED</td>
+                <td class="status-passed">0</td>
+                <td class="status-skipped">SKIPPED</td>
                 <td>MEDIUM (global)</td>
             </tr>
             
@@ -235,7 +235,7 @@
                 <td>0</td>
                 <td><1ms</td>
                 <td class="status-passed">0</td>
-                <td class="status-passed">PASSED</td>
+                <td class="status-skipped">SKIPPED</td>
                 <td>MEDIUM (global)</td>
             </tr>
             
@@ -284,9 +284,9 @@
 
         <h2>Summary</h2>
         <div class="summary-box">
-            <h3>Findings by Severity</h3><p>Statistics are calculated from the final aggregated SARIF report:</p><ul><li class="severity-error"><strong>ERROR</strong>: 10 finding(s)</li><li class="severity-warning"><strong>WARNING</strong>: 8 finding(s)</li><li class="severity-note"><strong>NOTE</strong>: 1 finding(s)</li></ul>
-            <h3>Findings by Type</h3><ul><li>B307: 1 finding(s)</li><li>GHSA-562c-5r94-xh97-flask: 1 finding(s)</li><li>GHSA-mh33-7rrq-662w-urllib3: 1 finding(s)</li><li>GHSA-38jv-5279-wg99-urllib3: 1 finding(s)</li><li>GHSA-5wv5-4vpf-pj6m-flask: 1 finding(s)</li><li>GHSA-wqvq-5m8c-6g24-urllib3: 1 finding(s)</li><li>GHSA-r64q-w8jr-g9qp-urllib3: 1 finding(s)</li><li>GHSA-m2qf-hxjv-5gpq-flask: 1 finding(s)</li><li>GHSA-v845-jxx5-vc9f-urllib3: 1 finding(s)</li><li>GHSA-34jh-p97f-mpxf-urllib3: 1 finding(s)</li><li>GHSA-gm62-xv2j-4w53-urllib3: 1 finding(s)</li><li>GHSA-2xpw-w6gg-jr37-urllib3: 1 finding(s)</li><li>GHSA-9hjg-9r4m-mvj7-requests: 1 finding(s)</li><li>GHSA-qccp-gfcp-xxvc-urllib3: 1 finding(s)</li><li>GHSA-gwvm-45gx-3cf8-urllib3: 1 finding(s)</li><li>GHSA-g4mx-q9vg-27p4-urllib3: 1 finding(s)</li><li>GHSA-pq67-6m6q-mj2v-urllib3: 1 finding(s)</li><li>GHSA-68rp-wp8r-4726-flask: 1 finding(s)</li><li>GHSA-gc5v-m9x4-r6x2-requests: 1 finding(s)</li></ul>
-            <h3>Top 2 Hotspots</h3><p>Files with the highest number of security findings:</p>
+            <h3>Findings by Severity</h3><p>Statistics are calculated from the final aggregated SARIF report:</p><ul><li class="severity-error"><strong>ERROR</strong>: 3 finding(s)</li></ul>
+            <h3>Findings by Type</h3><ul><li>AwsSolutions-S1: 1 finding(s)</li><li>AwsSolutions-S10: 2 finding(s)</li></ul>
+            <h3>Top 1 Hotspots</h3><p>Files with the highest number of security findings:</p>
         <table>
             <tr>
                 <th>Finding Count</th>
@@ -294,13 +294,8 @@
             </tr>
         
             <tr>
-                <td>17</td>
-                <td>requirements.txt</td>
-            </tr>
-            
-            <tr>
-                <td>1</td>
-                <td>/D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/app.py</td>
+                <td>3</td>
+                <td>cfn_test/insecure-s3.yaml</td>
             </tr>
             </table>
         </div>
@@ -317,146 +312,40 @@
         
             <tr>
                 <td class="severity-error">ERROR</td>
-                <td>B307</td>
-                <td>Use of possibly insecure function - consider using safer ast.literal_eval.</td>
-                <td>/D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/app.py:12</td>
+                <td>AwsSolutions-S1</td>
+                <td>The S3 Bucket has server access logs disabled.
+
+Exception Reason: N/A</td>
+                <td>cfn_test/insecure-s3.yaml:5</td>
             </tr>
             
             <tr>
                 <td class="severity-error">ERROR</td>
-                <td>GHSA-562c-5r94-xh97-flask</td>
-                <td>A high vulnerability in python package: flask, version 0.12.0 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\requirements.txt</td>
-                <td>requirements.txt:1</td>
+                <td>AwsSolutions-S10</td>
+                <td>The S3 Bucket or bucket policy does not require requests to use SSL.
+
+Exception Reason: N/A</td>
+                <td>cfn_test/insecure-s3.yaml:5</td>
             </tr>
             
             <tr>
                 <td class="severity-error">ERROR</td>
-                <td>GHSA-mh33-7rrq-662w-urllib3</td>
-                <td>A high vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\requirements.txt</td>
-                <td>requirements.txt:1</td>
-            </tr>
-            
-            <tr>
-                <td class="severity-error">ERROR</td>
-                <td>GHSA-38jv-5279-wg99-urllib3</td>
-                <td>A high vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\requirements.txt</td>
-                <td>requirements.txt:1</td>
-            </tr>
-            
-            <tr>
-                <td class="severity-error">ERROR</td>
-                <td>GHSA-5wv5-4vpf-pj6m-flask</td>
-                <td>A high vulnerability in python package: flask, version 0.12.0 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\requirements.txt</td>
-                <td>requirements.txt:1</td>
-            </tr>
-            
-            <tr>
-                <td class="severity-warning">WARNING</td>
-                <td>GHSA-wqvq-5m8c-6g24-urllib3</td>
-                <td>A medium vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\requirements.txt</td>
-                <td>requirements.txt:1</td>
-            </tr>
-            
-            <tr>
-                <td class="severity-warning">WARNING</td>
-                <td>GHSA-r64q-w8jr-g9qp-urllib3</td>
-                <td>A medium vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\requirements.txt</td>
-                <td>requirements.txt:1</td>
-            </tr>
-            
-            <tr>
-                <td class="severity-error">ERROR</td>
-                <td>GHSA-m2qf-hxjv-5gpq-flask</td>
-                <td>A high vulnerability in python package: flask, version 0.12.0 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\requirements.txt</td>
-                <td>requirements.txt:1</td>
-            </tr>
-            
-            <tr>
-                <td class="severity-error">ERROR</td>
-                <td>GHSA-v845-jxx5-vc9f-urllib3</td>
-                <td>A high vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\requirements.txt</td>
-                <td>requirements.txt:1</td>
-            </tr>
-            
-            <tr>
-                <td class="severity-warning">WARNING</td>
-                <td>GHSA-34jh-p97f-mpxf-urllib3</td>
-                <td>A medium vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\requirements.txt</td>
-                <td>requirements.txt:1</td>
-            </tr>
-            
-            <tr>
-                <td class="severity-error">ERROR</td>
-                <td>GHSA-gm62-xv2j-4w53-urllib3</td>
-                <td>A high vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\requirements.txt</td>
-                <td>requirements.txt:1</td>
-            </tr>
-            
-            <tr>
-                <td class="severity-error">ERROR</td>
-                <td>GHSA-2xpw-w6gg-jr37-urllib3</td>
-                <td>A high vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\requirements.txt</td>
-                <td>requirements.txt:1</td>
-            </tr>
-            
-            <tr>
-                <td class="severity-warning">WARNING</td>
-                <td>GHSA-9hjg-9r4m-mvj7-requests</td>
-                <td>A medium vulnerability in python package: requests, version 2.32.0 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\requirements.txt</td>
-                <td>requirements.txt:1</td>
-            </tr>
-            
-            <tr>
-                <td class="severity-error">ERROR</td>
-                <td>GHSA-qccp-gfcp-xxvc-urllib3</td>
-                <td>A high vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\requirements.txt</td>
-                <td>requirements.txt:1</td>
-            </tr>
-            
-            <tr>
-                <td class="severity-warning">WARNING</td>
-                <td>GHSA-gwvm-45gx-3cf8-urllib3</td>
-                <td>A medium vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\requirements.txt</td>
-                <td>requirements.txt:1</td>
-            </tr>
-            
-            <tr>
-                <td class="severity-warning">WARNING</td>
-                <td>GHSA-g4mx-q9vg-27p4-urllib3</td>
-                <td>A medium vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\requirements.txt</td>
-                <td>requirements.txt:1</td>
-            </tr>
-            
-            <tr>
-                <td class="severity-warning">WARNING</td>
-                <td>GHSA-pq67-6m6q-mj2v-urllib3</td>
-                <td>A medium vulnerability in python package: urllib3, version 1.24 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\requirements.txt</td>
-                <td>requirements.txt:1</td>
-            </tr>
-            
-            <tr>
-                <td class="severity-note">NOTE</td>
-                <td>GHSA-68rp-wp8r-4726-flask</td>
-                <td>A low vulnerability in python package: flask, version 0.12.0 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\requirements.txt</td>
-                <td>requirements.txt:1</td>
-            </tr>
-            
-            <tr>
-                <td class="severity-warning">WARNING</td>
-                <td>GHSA-gc5v-m9x4-r6x2-requests</td>
-                <td>A medium vulnerability in python package: requests, version 2.32.0 was found at: D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test/\requirements.txt</td>
-                <td>requirements.txt:1</td>
+                <td>AwsSolutions-S10</td>
+                <td>The S3 Bucket or bucket policy does not require requests to use SSL.
+
+Exception Reason: N/A</td>
+                <td>cfn_test/insecure-s3.yaml:11</td>
             </tr>
             </table>
 
         <h2>Scan Metadata</h2>
         <div class='metadata-section'>
             <div class="metadata-item">
-                <strong>report_id:</strong> ASH-20260707
+                <strong>report_id:</strong> ASH-20260709
             </div>
             
             <div class="metadata-item">
-                <strong>generated_at:</strong> 2026-07-07T08:49:48+00:00
+                <strong>generated_at:</strong> 2026-07-09T16:46:34+00:00
             </div>
             
             <div class="metadata-item">
@@ -472,11 +361,11 @@
             </div>
             
             <div class="metadata-item">
-                <strong>summary_stats:</strong> {&#x27;suppressed&#x27;: 0, &#x27;critical&#x27;: 9, &#x27;high&#x27;: 0, &#x27;medium&#x27;: 9, &#x27;low&#x27;: 1, &#x27;info&#x27;: 0, &#x27;start&#x27;: None, &#x27;end&#x27;: None, &#x27;duration&#x27;: 0.0, &#x27;total&#x27;: 19, &#x27;actionable&#x27;: 18, &#x27;passed&#x27;: 4, &#x27;failed&#x27;: 2, &#x27;missing&#x27;: 3, &#x27;skipped&#x27;: 1}
+                <strong>summary_stats:</strong> {&#x27;suppressed&#x27;: 0, &#x27;critical&#x27;: 3, &#x27;high&#x27;: 0, &#x27;medium&#x27;: 0, &#x27;low&#x27;: 0, &#x27;info&#x27;: 0, &#x27;start&#x27;: None, &#x27;end&#x27;: None, &#x27;duration&#x27;: 0.0, &#x27;total&#x27;: 3, &#x27;actionable&#x27;: 3, &#x27;passed&#x27;: 0, &#x27;failed&#x27;: 1, &#x27;missing&#x27;: 3, &#x27;skipped&#x27;: 6}
             </div>
             
             <div class="metadata-item">
-                <strong>validation_summary:</strong> {&#x27;scanner_tasks_validation&#x27;: {&#x27;timestamp&#x27;: &#x27;2026-07-07T14:20:08.661347&#x27;, &#x27;expected_count&#x27;: 6, &#x27;actual_count&#x27;: 6, &#x27;missing_count&#x27;: 0, &#x27;has_issues&#x27;: False, &#x27;successfully_retried&#x27;: 0}, &#x27;execution_completion_validation&#x27;: {&#x27;timestamp&#x27;: &#x27;2026-07-07T14:20:37.014322&#x27;, &#x27;expected_count&#x27;: 6, &#x27;completed_count&#x27;: 6, &#x27;missing_count&#x27;: 0, &#x27;unexpected_count&#x27;: 0, &#x27;completion_rate&#x27;: 1.0, &#x27;has_issues&#x27;: False}, &#x27;result_completeness_validation&#x27;: {&#x27;timestamp&#x27;: &#x27;2026-07-07T14:20:37.105892&#x27;, &#x27;expected_count&#x27;: 10, &#x27;final_count&#x27;: 10, &#x27;missing_count&#x27;: 0, &#x27;unexpected_count&#x27;: 0, &#x27;completeness_rate&#x27;: 1.0, &#x27;has_issues&#x27;: False}}
+                <strong>validation_summary:</strong> {&#x27;scanner_tasks_validation&#x27;: {&#x27;timestamp&#x27;: &#x27;2026-07-09T22:16:52.124265&#x27;, &#x27;expected_count&#x27;: 1, &#x27;actual_count&#x27;: 1, &#x27;missing_count&#x27;: 0, &#x27;has_issues&#x27;: False, &#x27;successfully_retried&#x27;: 0}, &#x27;execution_completion_validation&#x27;: {&#x27;timestamp&#x27;: &#x27;2026-07-09T22:17:12.706437&#x27;, &#x27;expected_count&#x27;: 1, &#x27;completed_count&#x27;: 1, &#x27;missing_count&#x27;: 0, &#x27;unexpected_count&#x27;: 0, &#x27;completion_rate&#x27;: 1.0, &#x27;has_issues&#x27;: False}, &#x27;result_completeness_validation&#x27;: {&#x27;timestamp&#x27;: &#x27;2026-07-09T22:17:12.706437&#x27;, &#x27;expected_count&#x27;: 10, &#x27;final_count&#x27;: 10, &#x27;missing_count&#x27;: 0, &#x27;unexpected_count&#x27;: 0, &#x27;completeness_rate&#x27;: 1.0, &#x27;has_issues&#x27;: False}}
             </div>
             
             <div class="metadata-item">

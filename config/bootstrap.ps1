@@ -14,7 +14,9 @@ pip install semgrep
 
 Write-Host "Installing CDK-NAG dependencies..."
 
-pip install cdk-nag aws-cdk-lib constructs
+pip install aws-cdk-lib==2.260.0
+pip install constructs
+pip install cdk-nag==2.28.195
 
 if ($LASTEXITCODE -ne 0) {
 
@@ -192,9 +194,9 @@ ash dependencies update
 
 #pre-commit install
 #pre-commit install --hook-type pre-push
-Write-Host "hooks installed1"
-pre-commit install --config config/.pre-commit-config1.yaml
+Write-Host "hooks installed"
+pre-commit install --config config/.pre-commit-config.yaml
 
-pre-commit install --hook-type pre-push --config config/.pre-commit-config1.yaml
+pre-commit install --hook-type pre-push --config config/.pre-commit-config.yaml
 
 Write-Host "Security Platform Installed Successfully"
