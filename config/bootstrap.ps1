@@ -190,7 +190,11 @@ ash dependencies update
 # Install Git Hooks
 # ==========================================
 
-pre-commit install
-pre-commit install --hook-type pre-push
+#pre-commit install
+#pre-commit install --hook-type pre-push
+Write-Host "hooks installed1"
+pre-commit install --config config/.pre-commit-config1.yaml
+
+pre-commit install --hook-type pre-push --config config/.pre-commit-config1.yaml
 
 Write-Host "Security Platform Installed Successfully"
