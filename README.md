@@ -265,7 +265,7 @@ Detects:
 
 Identify known vulnerabilities (CVEs) in software packages and supported artifacts present within the project repository.
 
-**Current Validation**
+Current Validation
 
 Operating System package vulnerabilities (where applicable)
 Application package vulnerabilities
