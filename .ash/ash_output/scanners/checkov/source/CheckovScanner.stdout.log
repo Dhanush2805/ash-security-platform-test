@@ -1,0 +1,54 @@
+
+
+       _               _
+   ___| |__   ___  ___| | _______   __
+  / __| '_ \ / _ \/ __| |/ / _ \ \ / /
+ | (__| | | |  __/ (__|   < (_) \ V /
+  \___|_| |_|\___|\___|_|\_\___/ \_/
+
+By Prisma Cloud | version: 3.3.1 
+Update available 3.3.1 -> 3.3.6
+Run pip3 install -U checkov to update 
+
+cloudformation scan results:
+
+Passed checks: 1, Failed checks: 0, Skipped checks: 0
+
+Check: CKV_AWS_26: "Ensure all data stored in the SNS topic is encrypted"
+	PASSED for resource: AWS::SNS::Topic.MyTopic
+	File: /cfn_test\insecure-s3.yaml:4-7
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-general-policies/general-15
+
+github_actions scan results:
+
+Passed checks: 8, Failed checks: 0, Skipped checks: 0
+
+Check: CKV_GHA_1: "Ensure ACTIONS_ALLOW_UNSECURE_COMMANDS isn't true on environment variables"
+	PASSED for resource: jobs(ash_scan)
+	File: /.github\workflows\security.yml:18-20
+Check: CKV_GHA_5: "Found artifact build without evidence of cosign sign execution in pipeline"
+	PASSED for resource: jobs
+	File: /.github\workflows\security.yml:17-20
+Check: CKV_GHA_6: "Found artifact build without evidence of cosign sbom attestation in pipeline"
+	PASSED for resource: jobs
+	File: /.github\workflows\security.yml:17-20
+Check: CKV_GHA_4: "Suspicious use of netcat with IP address"
+	PASSED for resource: jobs(ash_scan)
+	File: /.github\workflows\security.yml:18-20
+Check: CKV_GHA_2: "Ensure run commands are not vulnerable to shell injection"
+	PASSED for resource: jobs(ash_scan)
+	File: /.github\workflows\security.yml:18-20
+Check: CKV_GHA_3: "Suspicious use of curl with secrets"
+	PASSED for resource: jobs(ash_scan)
+	File: /.github\workflows\security.yml:18-20
+Check: CKV_GHA_7: "The build output cannot be affected by user parameters other than the build entry point and the top-level source location. GitHub Actions workflow_dispatch inputs MUST be empty. "
+	PASSED for resource: on(Security Scan)
+	File: /.github\workflows\security.yml:6-11
+Check: CKV2_GHA_1: "Ensure top-level permissions are not set to write-all"
+	PASSED for resource: on(Security Scan)
+	File: /.github\workflows\security.yml:11-17
+
+
+--- OUTPUT DELIMITER ---
+
+{"components": [{"bom-ref": "pkg:dockerfile/cli_repo/ash-security-platform-test/Dockerfile/Dockerfile@sha1:da39a3ee5e6b4b0d3255bfef95601890afd80709", "hashes": [{"alg": "SHA-1", "content": "da39a3ee5e6b4b0d3255bfef95601890afd80709"}], "name": "/Dockerfile", "purl": "pkg:dockerfile/cli_repo/ash-security-platform-test/Dockerfile/Dockerfile@sha1:da39a3ee5e6b4b0d3255bfef95601890afd80709", "type": "application", "version": "sha1:da39a3ee5e6b4b0d3255bfef95601890afd80709"}, {"bom-ref": "pkg:cloudformation/cli_repo/ash-security-platform-test/cfn_test%5Cinsecure-s3.yaml/AWS::SNS::Topic.MyTopic@sha1:9e545269bf3c2d9e486b70051394a65b2e883143", "hashes": [{"alg": "SHA-1", "content": "9e545269bf3c2d9e486b70051394a65b2e883143"}], "name": "AWS::SNS::Topic.MyTopic", "purl": "pkg:cloudformation/cli_repo/ash-security-platform-test/cfn_test%5Cinsecure-s3.yaml/AWS::SNS::Topic.MyTopic@sha1:9e545269bf3c2d9e486b70051394a65b2e883143", "type": "application", "version": "sha1:9e545269bf3c2d9e486b70051394a65b2e883143"}, {"bom-ref": "pkg:cloudformation/cli_repo/ash-security-platform-test/cfn_test%5Cinsecure-s3.yaml/AWS::SNS::TopicPolicy.MyTopicPolicy@sha1:9e545269bf3c2d9e486b70051394a65b2e883143", "hashes": [{"alg": "SHA-1", "content": "9e545269bf3c2d9e486b70051394a65b2e883143"}], "name": "AWS::SNS::TopicPolicy.MyTopicPolicy", "purl": "pkg:cloudformation/cli_repo/ash-security-platform-test/cfn_test%5Cinsecure-s3.yaml/AWS::SNS::TopicPolicy.MyTopicPolicy@sha1:9e545269bf3c2d9e486b70051394a65b2e883143", "type": "application", "version": "sha1:9e545269bf3c2d9e486b70051394a65b2e883143"}, {"bom-ref": "pkg:github_actions/cli_repo/ash-security-platform-test/.github%5Cworkflows%5Csecurity.yml/jobs@sha1:fc597ead01391fb142335af3a5dc2810555d1247", "hashes": [{"alg": "SHA-1", "content": "fc597ead01391fb142335af3a5dc2810555d1247"}], "name": "jobs", "purl": "pkg:github_actions/cli_repo/ash-security-platform-test/.github%5Cworkflows%5Csecurity.yml/jobs@sha1:fc597ead01391fb142335af3a5dc2810555d1247", "type": "application", "version": "sha1:fc597ead01391fb142335af3a5dc2810555d1247"}, {"bom-ref": "pkg:github_actions/cli_repo/ash-security-platform-test/.github%5Cworkflows%5Csecurity.yml/jobs%28ash_scan%29@sha1:fc597ead01391fb142335af3a5dc2810555d1247", "hashes": [{"alg": "SHA-1", "content": "fc597ead01391fb142335af3a5dc2810555d1247"}], "name": "jobs(ash_scan)", "purl": "pkg:github_actions/cli_repo/ash-security-platform-test/.github%5Cworkflows%5Csecurity.yml/jobs%28ash_scan%29@sha1:fc597ead01391fb142335af3a5dc2810555d1247", "type": "application", "version": "sha1:fc597ead01391fb142335af3a5dc2810555d1247"}, {"bom-ref": "pkg:github_actions/cli_repo/ash-security-platform-test/.github%5Cworkflows%5Csecurity.yml/on%28Security%20Scan%29@sha1:fc597ead01391fb142335af3a5dc2810555d1247", "hashes": [{"alg": "SHA-1", "content": "fc597ead01391fb142335af3a5dc2810555d1247"}], "name": "on(Security Scan)", "purl": "pkg:github_actions/cli_repo/ash-security-platform-test/.github%5Cworkflows%5Csecurity.yml/on%28Security%20Scan%29@sha1:fc597ead01391fb142335af3a5dc2810555d1247", "type": "application", "version": "sha1:fc597ead01391fb142335af3a5dc2810555d1247"}], "dependencies": [{"ref": "pkg:cloudformation/cli_repo/ash-security-platform-test/cfn_test%5Cinsecure-s3.yaml/AWS::SNS::Topic.MyTopic@sha1:9e545269bf3c2d9e486b70051394a65b2e883143"}, {"ref": "pkg:cloudformation/cli_repo/ash-security-platform-test/cfn_test%5Cinsecure-s3.yaml/AWS::SNS::TopicPolicy.MyTopicPolicy@sha1:9e545269bf3c2d9e486b70051394a65b2e883143"}, {"ref": "pkg:dockerfile/cli_repo/ash-security-platform-test/Dockerfile/Dockerfile@sha1:da39a3ee5e6b4b0d3255bfef95601890afd80709"}, {"ref": "pkg:github_actions/cli_repo/ash-security-platform-test/.github%5Cworkflows%5Csecurity.yml/jobs%28ash_scan%29@sha1:fc597ead01391fb142335af3a5dc2810555d1247"}, {"ref": "pkg:github_actions/cli_repo/ash-security-platform-test/.github%5Cworkflows%5Csecurity.yml/jobs@sha1:fc597ead01391fb142335af3a5dc2810555d1247"}, {"ref": "pkg:github_actions/cli_repo/ash-security-platform-test/.github%5Cworkflows%5Csecurity.yml/on%28Security%20Scan%29@sha1:fc597ead01391fb142335af3a5dc2810555d1247"}], "metadata": {"timestamp": "2026-07-07T08:50:31.404651+00:00", "tools": [{"externalReferences": [{"type": "build-system", "url": "https://github.com/CycloneDX/cyclonedx-python-lib/actions"}, {"type": "distribution", "url": "https://pypi.org/project/cyclonedx-python-lib/"}, {"type": "documentation", "url": "https://cyclonedx-python-library.readthedocs.io/"}, {"type": "issue-tracker", "url": "https://github.com/CycloneDX/cyclonedx-python-lib/issues"}, {"type": "license", "url": "https://github.com/CycloneDX/cyclonedx-python-lib/blob/main/LICENSE"}, {"type": "release-notes", "url": "https://github.com/CycloneDX/cyclonedx-python-lib/blob/main/CHANGELOG.md"}, {"type": "vcs", "url": "https://github.com/CycloneDX/cyclonedx-python-lib"}, {"type": "website", "url": "https://github.com/CycloneDX/cyclonedx-python-lib/#readme"}], "name": "cyclonedx-python-lib", "vendor": "CycloneDX", "version": "7.6.2"}, {"externalReferences": [{"type": "build-system", "url": "https://github.com/bridgecrewio/checkov/actions"}, {"type": "distribution", "url": "https://pypi.org/project/checkov/"}, {"type": "documentation", "url": "https://www.checkov.io/1.Welcome/What%20is%20Checkov.html"}, {"type": "issue-tracker", "url": "https://github.com/bridgecrewio/checkov/issues"}, {"type": "license", "url": "https://github.com/bridgecrewio/checkov/blob/master/LICENSE"}, {"type": "social", "url": "https://twitter.com/bridgecrewio"}, {"type": "vcs", "url": "https://github.com/bridgecrewio/checkov"}, {"type": "website", "url": "https://www.checkov.io/"}], "name": "checkov", "vendor": "bridgecrew", "version": "3.3.1"}]}, "serialNumber": "urn:uuid:5541330f-4d5f-4890-82af-4e5dce8a683e", "version": 1, "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json", "bomFormat": "CycloneDX", "specVersion": "1.4"}

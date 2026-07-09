@@ -1,0 +1,14 @@
+D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test\.github\workflows\security.yml
+D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test\.gitignore
+D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test\.pre-commit-config.yaml
+D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test\Dockerfile
+D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test\README.md
+D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test\app.py
+D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test\ash_debug.log
+D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test\bootstrap.ps1
+D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test\cfn_test\insecure-s3.yaml
+D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test\hook.log
+D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test\npm-audit-test\package-lock.json
+D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test\npm-audit-test\package.json
+D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test\requirements.txt
+D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test\template.yaml
