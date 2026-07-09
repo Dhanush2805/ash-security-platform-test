@@ -4,17 +4,20 @@
 
 # 📖 1. Overview
 
-The **GitHub Security Agent** is a centralized **DevSecOps Governance Platform** that automatically validates security, compliance, and organizational policies throughout the software development lifecycle.
+The **GitHub Security Agent** is a centralized **DevSecOps Governance Platform** that automatically validates security, compliance, and organizational policies throughout the Software Development Lifecycle (SDLC).
 
-Instead of implementing security independently in every application repository, all repositories consume a reusable GitHub Actions workflow hosted in a centralized security platform.
+Instead of implementing security independently in every application repository, all repositories consume:
+
+* A reusable **Developer Onboarding Package**
+* A centralized **GitHub Actions Workflow**
 
 This enables:
 
-- 🔒 Consistent Security Policies
-- 🚀 Automated Security Validation
-- 🏛️ Centralized Governance
-- 📊 Standardized Reporting
-- ⚡ Reduced Maintenance
+* 🔒 Consistent Security Policies
+* 🚀 Automated Security Validation
+* 🏛️ Centralized Governance
+* 📊 Standardized Reporting
+* ⚡ Reduced Maintenance
 
 ---
 
@@ -46,9 +49,18 @@ These challenges increase operational risk and reduce development efficiency.
 
 # 💡 3. Solution
 
-The GitHub Security Agent provides a **single centralized security workflow** that every application repository can reuse.
+The GitHub Security Agent provides a **single centralized security platform** that every application repository can consume.
 
-Instead of every repository maintaining its own security pipeline, they simply reference the centralized workflow.
+Each application repository contains a lightweight onboarding package consisting of:
+
+* `.github/workflows/ash-scan.yml`
+* `config/bootstrap.ps1`
+* `config/.pre-commit-config.yaml`
+* `.gitignore`
+
+These files prepare the local development environment, install Git hooks, and integrate the repository with the centralized GitHub Security Agent.
+
+For Pull Request validation, the application repository references the centralized GitHub Actions workflow.
 
 ```yaml
 jobs:
@@ -60,10 +72,107 @@ Any enhancement made to the centralized workflow automatically benefits all cons
 
 ---
 
-# 🔄 4. End-to-End Security Workflow
+# 👨‍💻 4. Developer Onboarding
+
+Every developer onboarding to an application repository must complete a one-time setup before beginning development.
+
+## Repository Structure
+
+```text
+Application Repository
+│
+├── .github/
+│   └── workflows/
+│       └── ash-scan.yml
+│
+├── config/
+│   ├── bootstrap.ps1
+│   └── .pre-commit-config.yaml
+│
+├── .gitignore
+│
+└── Application Source Code
+```
+
+## Step 1 — Clone the Repository
+
+```bash
+git clone <application-repository>
+```
+
+---
+
+## Step 2 — Verify Required Files
+
+Ensure the following onboarding files and folders are present after cloning:
+
+* ✅ `.github/`
+* ✅ `.gitignore`
+* ✅ `config/bootstrap.ps1`
+* ✅ `config/.pre-commit-config.yaml`
+
+---
+
+## Step 3 — Run Bootstrap
+
+From the repository root, execute:
+
+```powershell
+.\config\bootstrap.ps1
+```
+
+The bootstrap process automatically:
+
+* Installs `pre-commit`
+* Installs ASH
+* Installs Semgrep
+* Installs CDK-NAG dependencies
+* Installs Node.js dependencies
+* Installs Syft
+* Installs Grype
+* Updates ASH dependencies
+* Installs Git Pre-Commit hook
+* Installs Git Pre-Push hook
+
+---
+
+## Step 4 — Start Development
+
+After the bootstrap process completes successfully, the developer is ready to begin application development.
+
+From this point onward:
+
+* Every **Git Commit** automatically executes the configured Pre-Commit security hooks.
+* Every **Git Push** automatically executes the configured Pre-Push security hooks.
+* Every **Pull Request** automatically executes the centralized GitHub Security workflow.
+
+No additional setup is required unless the local development environment is recreated.
+
+---
+
+# 🔄 5. End-to-End Security Workflow
 
 ```text
 👨‍💻 Developer
+        │
+        ▼
+📥 Clone Application Repository
+        │
+        ▼
+🔍 Verify Repository Structure
+(.github, .gitignore, config)
+        │
+        ▼
+⚙ Run config/bootstrap.ps1
+        │
+        ▼
+📦 Install Dependencies
+        │
+        ▼
+🔗 Install Git Hooks
+        │
+        ▼
+💻 Application Development
         │
         ▼
 📝 Git Commit
@@ -162,7 +271,7 @@ or
 
 ---
 
-# 🔍 5. Security Controls
+# 🔍 6. Security Controls
 
 ## 👤 Identity Governance
 
@@ -172,8 +281,8 @@ Validate that commits originate only from approved corporate email addresses.
 
 **Outcome**
 
-- ✅ Allow authorized developers
-- ❌ Block unauthorized identities
+* ✅ Allow authorized developers
+* ❌ Block unauthorized identities
 
 ---
 
@@ -185,35 +294,35 @@ Verify that all Python packages comply with the organization's approved licensin
 
 **Outcome**
 
-- ✅ Approved licenses
-- ❌ Restricted or unknown licenses
+* ✅ Approved licenses
+* ❌ Restricted or unknown licenses
 
 ---
 
 ## 💻 Source Code Security
 
-**Scanners**
+### Scanners
 
-- 🐍 Bandit
-- 🔎 Semgrep
+* 🐍 Bandit
+* 🔎 Semgrep
 
 **Purpose**
 
 Detect insecure coding practices including:
 
-- SQL Injection
-- Command Injection
-- Weak Cryptography
-- Hardcoded Credentials
-- Unsafe API Usage
+* SQL Injection
+* Command Injection
+* Weak Cryptography
+* Hardcoded Credentials
+* Unsafe API Usage
 
 ---
 
 ## 🔑 Secret Detection
 
-**Scanner**
+### Scanner
 
-- 🔐 Detect-Secrets
+* 🔐 Detect-Secrets
 
 **Purpose**
 
@@ -221,20 +330,20 @@ Prevent accidental exposure of sensitive information.
 
 Examples:
 
-- AWS Keys
-- API Tokens
-- GitHub Tokens
-- Passwords
-- Private Keys
+* AWS Keys
+* API Tokens
+* GitHub Tokens
+* Passwords
+* Private Keys
 
 ---
 
 ## ☁ Infrastructure Security
 
-**Scanners**
+### Scanners
 
-- 🏗️ Checkov
-- 🏛️ CDK-Nag
+* 🏗️ Checkov
+* 🏛️ CDK-Nag
 
 **Purpose**
 
@@ -242,43 +351,36 @@ Validate Infrastructure-as-Code against security best practices.
 
 Supports:
 
-- Terraform
-- CloudFormation
-- AWS CDK
+* Terraform
+* CloudFormation
+* AWS CDK
 
 Detects:
 
-- Public Resources
-- Missing Encryption
-- IAM Misconfigurations
-- Open Security Groups
+* Public Resources
+* Missing Encryption
+* IAM Misconfigurations
+* Open Security Groups
 
 ---
 
-## 🐳 Container Security
+##🛡️ Container Security
 
-**Scanner**
+### Scanner
 
-- 🐳 Grype
+* 🛡️ Grype
 
 **Purpose**
 
-Identify known vulnerabilities (CVEs) in software packages and supported artifacts present within the project repository.
-
-**Current Validation**
-
-Operating System package vulnerabilities (where applicable)
-Application package vulnerabilities
-Supported dependency artifacts
-Known CVEs from the Grype vulnerability database
+Identify known vulnerabilities (CVEs) in supported operating system packages, application packages, and dependency artifacts present within the repository.
 
 ---
 
 ## 📦 Dependency Security
 
-**Scanner**
+### Scanner
 
-- 📦 npm-audit
+* 📦 npm-audit
 
 **Purpose**
 
@@ -286,9 +388,9 @@ Detect vulnerable Node.js packages before deployment.
 
 ---
 
-# 📊 6. Expected Outcome
+# 📊 7. Expected Outcome
 
-### ✅ Success
+## ✅ Success
 
 When all validations pass:
 
@@ -302,7 +404,7 @@ When all validations pass:
 
 ---
 
-### ❌ Failure
+## ❌ Failure
 
 If any validation fails:
 
@@ -316,11 +418,15 @@ If any validation fails:
 
 ---
 
-# 🎯 7. Business Benefits
+# 🎯 8. Business Benefits
 
 ✅ Centralized Security Governance
 
+✅ Standardized Developer Onboarding
+
 ✅ Reusable GitHub Actions Workflow
+
+✅ Reusable Git Hook Framework
 
 ✅ Consistent Security Policies
 
@@ -338,8 +444,8 @@ If any validation fails:
 
 ---
 
-# 🏁 8. Conclusion
+# 🏁 9. Conclusion
 
-The GitHub Security Agent provides a centralized security framework that integrates governance, compliance, Infrastructure-as-Code validation, application security testing, dependency analysis, secret detection, and container vulnerability scanning into a single reusable GitHub Actions workflow.
+The GitHub Security Agent provides a centralized DevSecOps framework that combines developer onboarding, Git hook enforcement, governance, compliance, Infrastructure-as-Code validation, application security testing, dependency analysis, secret detection, and container vulnerability scanning into a reusable platform.
 
-By enforcing security controls at the **Pre-Commit**, **Pre-Push**, and **Pull Request** stages, the platform ensures that only secure, compliant, and policy-approved code progresses through the Software Development Lifecycle (SDLC).
+By enforcing security controls during **Developer Onboarding**, **Pre-Commit**, **Pre-Push**, and **Pull Request** stages, the platform ensures that only secure, compliant, and policy-approved code progresses through the Software Development Lifecycle (SDLC).
