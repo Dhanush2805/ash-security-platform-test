@@ -55,30 +55,65 @@ Developer
 Git Commit
      │
      ▼
+──────────────────────────────────────
+Pre-Commit Hook
+──────────────────────────────────────
+│
+├── Email Governance Validation
+├── Open Source License Validation
+└── ASH Security Scan
+      ├── Bandit
+      ├── Detect-Secrets
+      ├── Checkov
+      ├── CDK-Nag
+      ├── Grype
+      └── npm-audit
+│
+▼
+Commit Successful
+     │
+     ▼
+──────────────────────────────────────
+Pre-Push Hook
+──────────────────────────────────────
+│
+├── Email Governance Validation
+├── Open Source License Validation
+└── ASH Security Scan
+      ├── Bandit
+      ├── Detect-Secrets
+      ├── Checkov
+      ├── CDK-Nag
+      ├── Grype
+      └── npm-audit
+│
+▼
+Code Pushed to GitHub
+     │
+     ▼
 Pull Request Created
      │
      ▼
+──────────────────────────────────────
 GitHub Security Agent
-     │
-     ├────────► Email Governance Validation
-     │
-     ├────────► Open Source License Validation
-     │
-     ├────────► AWS ASH Security Platform
-     │               │
-     │               ├── Bandit
-     │               ├── Detect-Secrets
-     │               ├── Semgrep
-     │               ├── Checkov
-     │               ├── CDK-Nag
-     │               ├── Grype
-     │               └── npm-audit
-     │
-     ▼
-Generate Security Reports (SARIF)
-     │
-     ▼
-Pass / Fail Pull Request
+──────────────────────────────────────
+│
+├── Email Governance Validation
+├── Open Source License Validation
+└── ASH Security Scan
+      ├── Bandit
+      ├── Detect-Secrets
+      ├── Semgrep
+      ├── Checkov
+      ├── CDK-Nag
+      ├── Grype
+      └── npm-audit
+│
+▼
+Generate SARIF Reports
+│
+▼
+PASS / FAIL Pull Request
 ```
 
 ---
