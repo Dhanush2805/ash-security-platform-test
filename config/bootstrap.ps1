@@ -6,6 +6,7 @@ Write-Host "Installing Security Platform..."
 
 pip install pre-commit
 pip install git+https://github.com/awslabs/automated-security-helper.git@v3.5.4
+pip install "typer==0.19.2"
 pip install semgrep
 
 # ==========================================
