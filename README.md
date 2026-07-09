@@ -1,6 +1,4 @@
-# ash-security-platform-test
-
-# Use Case: Centralized GitHub Security Agent
+# Centralized GitHub Security Agent
 
 ## 1. Overview
 
