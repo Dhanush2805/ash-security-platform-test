@@ -162,7 +162,7 @@ or
 
 ---
 
-# 🔍 5. Security Validation
+# 🔍 5. Security Controls
 
 ## 👤 Identity Governance
 
@@ -263,11 +263,14 @@ Detects:
 
 **Purpose**
 
-Detect known vulnerabilities (CVEs) in:
+Identify known vulnerabilities (CVEs) in software packages and supported artifacts present within the project repository.
 
-- Docker Images
-- Operating System Packages
-- Installed Software Dependencies
+**Current Validation**
+
+Operating System package vulnerabilities (where applicable)
+Application package vulnerabilities
+Supported dependency artifacts
+Known CVEs from the Grype vulnerability database
 
 ---
 
