@@ -363,7 +363,6 @@ Detects:
 * Open Security Groups
 
 ---
-
 ## 🛡️ Container Security
 
 ### Scanner
