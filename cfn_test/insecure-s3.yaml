@@ -1,23 +1,42 @@
+#AWSTemplateFormatVersion: '2010-09-09'
+#
+#Resources:
+#
+#  BadBucket:
+#    Type: AWS::S3::Bucket
+#    Properties:
+#      BucketEncryption:
+#        ServerSideEncryptionConfiguration: []
+#
+#  BadBucketPolicy:
+#    Type: AWS::S3::BucketPolicy
+#    Properties:
+#      Bucket: !Ref BadBucket
+#      PolicyDocument:
+#        Version: "2012-10-17"
+#        Statement:
+#          - Effect: Allow
+#            Principal: "*"
+#            Action: "s3:*"
+#            Resource:
+#              - !GetAtt BadBucket.Arn
+#              - !Sub "${BadBucket.Arn}/*"
+
 AWSTemplateFormatVersion: '2010-09-09'
 
 Resources:
 
-  BadBucket:
+  PublicBucket:
     Type: AWS::S3::Bucket
-    Properties:
-      BucketEncryption:
-        ServerSideEncryptionConfiguration: []
 
-  BadBucketPolicy:
-    Type: AWS::S3::BucketPolicy
     Properties:
-      Bucket: !Ref BadBucket
-      PolicyDocument:
-        Version: "2012-10-17"
-        Statement:
-          - Effect: Allow
-            Principal: "*"
-            Action: "s3:*"
-            Resource:
-              - !GetAtt BadBucket.Arn
-              - !Sub "${BadBucket.Arn}/*"
+
+      PublicAccessBlockConfiguration:
+
+        BlockPublicAcls: false
+
+        IgnorePublicAcls: false
+
+        BlockPublicPolicy: false
+
+        RestrictPublicBuckets: false
