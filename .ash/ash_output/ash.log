@@ -1,0 +1,73 @@
+2026-07-09 22:16:33,988	INFO	log.py:642	Initializing ASH v3.5.4 
+2026-07-09 22:16:34,024	INFO	log.py:642	Initializing execution engine 
+2026-07-09 22:16:34,024	INFO	log.py:642	ASH Orchestrator and ScanExecutionEngine initialized 
+2026-07-09 22:16:34,024	INFO	log.py:642	Identifying non-ignored files to include in scans 
+2026-07-09 22:16:34,823	INFO	log.py:642	Found 1070 files within the provided source directory to scan. Please see the 'ash-scan-set-files-list.txt' in the output folder for the full list of files identified to scan within the source directory identified. 
+2026-07-09 22:16:34,823	INFO	log.py:642	Executing phases: ['convert', 'scan', 'report'] 
+2026-07-09 22:16:34,823	INFO	log.py:642	===== ASH Security Scan Starting ===== 
+2026-07-09 22:16:34,823	INFO	log.py:642	Executing phases: convert, scan, report 
+2026-07-09 22:16:34,824	INFO	log.py:642	ASH Security Scan started 
+2026-07-09 22:16:34,824	INFO	log.py:642	
+----- Starting phase: CONVERT ----- 
+2026-07-09 22:16:38,506	INFO	log.py:642	No archive files (.zip, .tar, .gz) found in D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test 
+2026-07-09 22:16:40,304	INFO	log.py:642	No Jupyter notebook (.ipynb) files found in D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test 
+2026-07-09 22:16:40,304	WARNING	log.py:642	No files were converted by any converter plugins 
+2026-07-09 22:16:40,304	INFO	log.py:642	
+----- Starting phase: SCAN ----- 
+2026-07-09 22:16:40,446	INFO	log.py:642	Building scanner tasks... 
+2026-07-09 22:16:41,871	WARNING	log.py:642	([yellow]checkov[/yellow] @ [magenta]source[/magenta])	Could not determine UV tool checkov version 
+2026-07-09 22:16:50,782	INFO	log.py:642	([yellow]bandit[/yellow] @ [magenta]source[/magenta])	Bandit already installed via UV tool 
+2026-07-09 22:16:50,782	INFO	log.py:642	Scanner bandit excluded from execution: not in enabled scanners list 
+2026-07-09 22:16:50,793	WARNING	log.py:642	Scanner cfn-nag dependencies are not satisfied, marking as MISSING 
+2026-07-09 22:16:51,023	INFO	log.py:642	Scanner checkov excluded from execution: not in enabled scanners list 
+2026-07-09 22:16:51,025	INFO	log.py:642	Scanner detect-secrets excluded from execution: not in enabled scanners list 
+2026-07-09 22:16:51,031	INFO	log.py:642	Scanner grype excluded from execution: not in enabled scanners list 
+2026-07-09 22:16:52,094	INFO	log.py:642	Scanner npm-audit excluded from execution: not in enabled scanners list 
+2026-07-09 22:16:52,110	WARNING	log.py:642	Scanner opengrep dependencies are not satisfied, marking as MISSING 
+2026-07-09 22:16:52,113	INFO	log.py:642	([yellow]semgrep[/yellow] @ [magenta]source[/magenta])	Semgrep is not supported on Windows and will be skipped 
+2026-07-09 22:16:52,113	WARNING	log.py:642	Scanner semgrep dependencies are not satisfied, marking as MISSING 
+2026-07-09 22:16:52,120	INFO	log.py:642	Scanner syft excluded from execution: not in enabled scanners list 
+2026-07-09 22:16:52,123	INFO	log.py:642	Scanner enablement validation summary: 
+2026-07-09 22:16:52,123	INFO	log.py:642	  Total registered scanners: 10 
+2026-07-09 22:16:52,123	INFO	log.py:642	  Enabled scanners (1): cdk-nag 
+2026-07-09 22:16:52,123	INFO	log.py:642	  Excluded scanners (6): bandit, checkov, detect-secrets, grype, npm-audit, syft 
+2026-07-09 22:16:52,124	INFO	log.py:642	Starting scanner tasks validation 
+2026-07-09 22:16:52,124	INFO	log.py:642	Scanner tasks validation completed successfully 
+2026-07-09 22:16:52,124	INFO	log.py:642	Scanner Filtering Summary: 
+2026-07-09 22:16:52,124	INFO	log.py:642	   Total scanner classes found: 10 
+2026-07-09 22:16:52,124	INFO	log.py:642	   Enabled scanners after filtering: 1 
+2026-07-09 22:16:52,124	INFO	log.py:642	   Enabled scanner names: ['cdk-nag'] 
+2026-07-09 22:16:52,125	INFO	log.py:642	   Excluded scanners: 0 
+2026-07-09 22:16:52,125	INFO	log.py:642	   Missing dependencies: 0 
+2026-07-09 22:16:52,125	INFO	log.py:642	   Total accounted for: 1 
+2026-07-09 22:16:52,125	INFO	log.py:642	Running scanner: cdk-nag 
+2026-07-09 22:16:52,126	INFO	log.py:642	([yellow]cdk-nag[/yellow] @ [magenta]source[/magenta])	Starting scan 
+2026-07-09 22:17:12,679	INFO	log.py:642	([yellow]cdk-nag[/yellow] @ [magenta]source[/magenta])	Scan completed in 20.553646 seconds 
+2026-07-09 22:17:12,705	INFO	log.py:642	All scanners completed! 
+2026-07-09 22:17:12,706	INFO	log.py:642	Starting execution completion validation 
+2026-07-09 22:17:12,706	INFO	log.py:642	Scanner execution completion validation summary: 
+2026-07-09 22:17:12,706	INFO	log.py:642	Execution completion validation passed - completion rate: 100.0% 
+2026-07-09 22:17:12,706	INFO	log.py:642	Validating result completeness... 
+2026-07-09 22:17:12,706	INFO	log.py:642	Result completeness validation passed - completeness rate: 100.0% 
+2026-07-09 22:17:12,708	INFO	log.py:642	
+----- Starting phase: REPORT ----- 
+2026-07-09 22:17:12,710	INFO	log.py:642	Preparing report data... 
+2026-07-09 22:17:12,826	INFO	log.py:642	Writing csv report to D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test\.ash\ash_output\reports\ash.csv 
+2026-07-09 22:17:12,829	INFO	log.py:642	Writing cyclonedx report to D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test\.ash\ash_output\reports\ash.cdx.json 
+2026-07-09 22:17:12,831	INFO	log.py:642	Writing github-ghas report to D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test\.ash\ash_output\reports\ash.ghas.sarif 
+2026-07-09 22:17:12,831	INFO	log.py:642	Writing gitlab-cyclonedx report to D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test\.ash\ash_output\reports\ash.gl-dependency-scanning-report.cdx.json 
+2026-07-09 22:17:12,836	INFO	log.py:642	Writing gitlab-sast report to D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test\.ash\ash_output\reports\ash.gl-sast-report.json 
+2026-07-09 22:17:12,843	INFO	log.py:642	Writing html report to D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test\.ash\ash_output\reports\ash.html 
+2026-07-09 22:17:12,846	INFO	log.py:642	Writing flat-json report to D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test\.ash\ash_output\reports\ash.flat.json 
+2026-07-09 22:17:12,857	INFO	log.py:642	Writing junitxml report to D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test\.ash\ash_output\reports\ash.junit.xml 
+2026-07-09 22:17:12,857	INFO	log.py:642	Writing markdown report to D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test\.ash\ash_output\reports\ash.summary.md 
+2026-07-09 22:17:12,857	INFO	log.py:642	Starting OCSF report generation 
+2026-07-09 22:17:12,867	INFO	log.py:642	Processing 3 SARIF results for OCSF report 
+2026-07-09 22:17:12,867	INFO	log.py:642	OCSF report processing complete: 3/3 findings created successfully (100.0% success rate) 
+2026-07-09 22:17:12,867	INFO	log.py:642	Finding status breakdown: 3 active, 0 suppressed 
+2026-07-09 22:17:12,867	INFO	log.py:642	Successfully generated OCSF report with 3 findings (4417 characters) 
+2026-07-09 22:17:12,867	INFO	log.py:642	Writing ocsf report to D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test\.ash\ash_output\reports\ash.ocsf.json 
+2026-07-09 22:17:12,873	INFO	log.py:642	Writing sarif report to D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test\.ash\ash_output\reports\ash.sarif 
+2026-07-09 22:17:12,878	INFO	log.py:642	Writing text report to D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test\.ash\ash_output\reports\ash.summary.txt 
+2026-07-09 22:17:12,878	INFO	log.py:642	Writing unused-suppressions report to D:\Dhanush\Custom_Agents\ash-security-platform-test\ash-security-platform-test\.ash\ash_output\reports\ash.unused-suppressions.json 
+2026-07-09 22:17:12,878	INFO	log.py:642	===== ASH Security Scan Completed in 38s ===== 

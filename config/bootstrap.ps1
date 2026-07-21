@@ -6,6 +6,7 @@ Write-Host "Installing Security Platform..."
 
 pip install pre-commit
 pip install git+https://github.com/awslabs/automated-security-helper.git@v3.5.4
+pip install "typer==0.19.2"
 pip install semgrep
 
 # ==========================================
@@ -14,7 +15,9 @@ pip install semgrep
 
 Write-Host "Installing CDK-NAG dependencies..."
 
-pip install cdk-nag aws-cdk-lib constructs
+pip install aws-cdk-lib==2.260.0
+pip install constructs
+pip install cdk-nag==2.28.195
 
 if ($LASTEXITCODE -ne 0) {
 
@@ -190,7 +193,11 @@ ash dependencies update
 # Install Git Hooks
 # ==========================================
 
-pre-commit install
-pre-commit install --hook-type pre-push
+#pre-commit install
+#pre-commit install --hook-type pre-push
+Write-Host "hooks installed"
+pre-commit install --config config/.pre-commit-config.yaml
+
+pre-commit install --hook-type pre-push --config config/.pre-commit-config.yaml
 
 Write-Host "Security Platform Installed Successfully"

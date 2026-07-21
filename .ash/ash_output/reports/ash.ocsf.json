@@ -1,0 +1,146 @@
+[
+  {
+    "activity_id": 1,
+    "activity_name": "Scan",
+    "category_name": "Findings",
+    "category_uid": 2,
+    "class_uid": 2002,
+    "finding_info": {
+      "desc": "The S3 Bucket has server access logs disabled.\n\nException Reason: N/A",
+      "title": "AwsSolutions-S1 in insecure-s3.yaml - The S3 Bucket has server access logs disabled.\n\nException Reason: N/A",
+      "uid": "38efd8ce-bc31-43b5-81dd-b058b0bd32d8"
+    },
+    "metadata": {
+      "logged_time": 1783615632857,
+      "product": {
+        "name": "Automated Security Helper",
+        "vendor_name": "Amazon Web Services",
+        "version": "3.5.4"
+      },
+      "version": "1.1.0"
+    },
+    "severity_id": 4,
+    "status": "New",
+    "status_id": 1,
+    "time": 1783615632857,
+    "type_uid": 200201,
+    "vulnerabilities": [
+      {
+        "affected_code": [
+          {
+            "end_line": 5,
+            "file": {
+              "name": "insecure-s3.yaml",
+              "path": "cfn_test/insecure-s3.yaml",
+              "type_id": 1
+            },
+            "start_line": 5
+          }
+        ],
+        "cve": {
+          "desc": "The S3 Bucket has server access logs disabled.\n\nException Reason: N/A",
+          "uid": "AwsSolutions-S1"
+        },
+        "desc": "The S3 Bucket has server access logs disabled.\n\nException Reason: N/A",
+        "severity": "ERROR",
+        "title": "AwsSolutions-S1"
+      }
+    ]
+  },
+  {
+    "activity_id": 1,
+    "activity_name": "Scan",
+    "category_name": "Findings",
+    "category_uid": 2,
+    "class_uid": 2002,
+    "finding_info": {
+      "desc": "The S3 Bucket or bucket policy does not require requests to use SSL.\n\nException Reason: N/A",
+      "title": "AwsSolutions-S10 in insecure-s3.yaml - The S3 Bucket or bucket policy does not require requests to use SSL.\n\nException R...",
+      "uid": "6da35303-edfb-4bb7-a55d-d98265e31d86"
+    },
+    "metadata": {
+      "logged_time": 1783615632857,
+      "product": {
+        "name": "Automated Security Helper",
+        "vendor_name": "Amazon Web Services",
+        "version": "3.5.4"
+      },
+      "version": "1.1.0"
+    },
+    "severity_id": 4,
+    "status": "New",
+    "status_id": 1,
+    "time": 1783615632857,
+    "type_uid": 200201,
+    "vulnerabilities": [
+      {
+        "affected_code": [
+          {
+            "end_line": 5,
+            "file": {
+              "name": "insecure-s3.yaml",
+              "path": "cfn_test/insecure-s3.yaml",
+              "type_id": 1
+            },
+            "start_line": 5
+          }
+        ],
+        "cve": {
+          "desc": "The S3 Bucket or bucket policy does not require requests to use SSL.\n\nException Reason: N/A",
+          "uid": "AwsSolutions-S10"
+        },
+        "desc": "The S3 Bucket or bucket policy does not require requests to use SSL.\n\nException Reason: N/A",
+        "severity": "ERROR",
+        "title": "AwsSolutions-S10"
+      }
+    ]
+  },
+  {
+    "activity_id": 1,
+    "activity_name": "Scan",
+    "category_name": "Findings",
+    "category_uid": 2,
+    "class_uid": 2002,
+    "finding_info": {
+      "desc": "The S3 Bucket or bucket policy does not require requests to use SSL.\n\nException Reason: N/A",
+      "title": "AwsSolutions-S10 in insecure-s3.yaml - The S3 Bucket or bucket policy does not require requests to use SSL.\n\nException R...",
+      "uid": "e8cb3f26-1a7d-4ccf-9bae-a3ad3b7d33ed"
+    },
+    "metadata": {
+      "logged_time": 1783615632857,
+      "product": {
+        "name": "Automated Security Helper",
+        "vendor_name": "Amazon Web Services",
+        "version": "3.5.4"
+      },
+      "version": "1.1.0"
+    },
+    "severity_id": 4,
+    "status": "New",
+    "status_id": 1,
+    "time": 1783615632857,
+    "type_uid": 200201,
+    "vulnerabilities": [
+      {
+        "affected_code": [
+          {
+            "end_line": 11,
+            "file": {
+              "name": "insecure-s3.yaml",
+              "path": "cfn_test/insecure-s3.yaml",
+              "type_id": 1
+            },
+            "start_line": 11
+          }
+        ],
+        "cve": {
+          "desc": "The S3 Bucket or bucket policy does not require requests to use SSL.\n\nException Reason: N/A",
+          "uid": "AwsSolutions-S10"
+        },
+        "desc": "The S3 Bucket or bucket policy does not require requests to use SSL.\n\nException Reason: N/A",
+        "severity": "ERROR",
+        "title": "AwsSolutions-S10"
+      }
+    ]
+  }
+]

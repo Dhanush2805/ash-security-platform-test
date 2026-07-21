@@ -1,0 +1,163 @@
+{
+  "/ASHCDKNagScanner": [
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...jsii runtime, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ASHCDKNagScanner/cfn_test--insecure-s3.yaml": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "cfntestinsecures3yaml"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...jsii runtime, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ASHCDKNagScanner/BootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "BootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ASHCDKNagScanner/CheckBootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CheckBootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ASHCDKNagScanner/cfn_test--insecure-s3.yaml/BadBucket": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "BadBucket"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "aws:cdk:error",
+      "data": "AwsSolutions-S1: The S3 Bucket has server access logs disabled.\n",
+      "trace": [
+        "Annotations.addMessage (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\annotations.js:1:3441)",
+        "Annotations.addError (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\annotations.js:1:2673)",
+        "AnnotationLogger.onNonCompliance (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\cdk-nag\\lib\\nag-logger.js:29:57)",
+        "C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\cdk-nag\\lib\\nag-pack.js:79:55",
+        "Array.forEach (<anonymous>)",
+        "AwsSolutionsChecks.applyRule (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\cdk-nag\\lib\\nag-pack.js:79:38)",
+        "AwsSolutionsChecks.checkStorage (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\cdk-nag\\lib\\packs\\aws-solutions.js:246:14)",
+        "AwsSolutionsChecks.visit (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\cdk-nag\\lib\\packs\\aws-solutions.js:66:18)",
+        "recurse (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\private\\synthesis.js:2:5462)",
+        "recurse (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\private\\synthesis.js:2:5697)",
+        "recurse (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\private\\synthesis.js:2:5697)",
+        "recurse (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\private\\synthesis.js:2:5697)",
+        "invokeAspectsV2 (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\private\\synthesis.js:2:3967)",
+        "synthesize (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\private\\synthesis.js:1:3478)",
+        "App.synth (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\stage.js:1:4636)",
+        "App.synth (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\app.js:1:4814)",
+        "C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\tmpwiu77bx8\\lib\\program.js:1:55650",
+        "Kernel._Kernel_ensureSync (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\tmpwiu77bx8\\lib\\program.js:1:71267)",
+        "Kernel.invoke (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\tmpwiu77bx8\\lib\\program.js:1:55595)",
+        "KernelHost.processRequest (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\tmpwiu77bx8\\lib\\program.js:1:228006)",
+        "KernelHost.run (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\tmpwiu77bx8\\lib\\program.js:1:226990)",
+        "Immediate._onImmediate (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\tmpwiu77bx8\\lib\\program.js:1:227034)",
+        "process.processImmediate (node:internal/timers:485:21)"
+      ]
+    },
+    {
+      "type": "aws:cdk:error",
+      "data": "AwsSolutions-S10: The S3 Bucket or bucket policy does not require requests to use SSL.\n",
+      "trace": [
+        "Annotations.addMessage (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\annotations.js:1:3441)",
+        "Annotations.addError (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\annotations.js:1:2673)",
+        "AnnotationLogger.onNonCompliance (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\cdk-nag\\lib\\nag-logger.js:29:57)",
+        "C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\cdk-nag\\lib\\nag-pack.js:79:55",
+        "Array.forEach (<anonymous>)",
+        "AwsSolutionsChecks.applyRule (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\cdk-nag\\lib\\nag-pack.js:79:38)",
+        "AwsSolutionsChecks.checkStorage (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\cdk-nag\\lib\\packs\\aws-solutions.js:270:14)",
+        "AwsSolutionsChecks.visit (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\cdk-nag\\lib\\packs\\aws-solutions.js:66:18)",
+        "recurse (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\private\\synthesis.js:2:5462)",
+        "recurse (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\private\\synthesis.js:2:5697)",
+        "recurse (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\private\\synthesis.js:2:5697)",
+        "recurse (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\private\\synthesis.js:2:5697)",
+        "invokeAspectsV2 (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\private\\synthesis.js:2:3967)",
+        "synthesize (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\private\\synthesis.js:1:3478)",
+        "App.synth (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\stage.js:1:4636)",
+        "App.synth (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\app.js:1:4814)",
+        "C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\tmpwiu77bx8\\lib\\program.js:1:55650",
+        "Kernel._Kernel_ensureSync (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\tmpwiu77bx8\\lib\\program.js:1:71267)",
+        "Kernel.invoke (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\tmpwiu77bx8\\lib\\program.js:1:55595)",
+        "KernelHost.processRequest (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\tmpwiu77bx8\\lib\\program.js:1:228006)",
+        "KernelHost.run (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\tmpwiu77bx8\\lib\\program.js:1:226990)",
+        "Immediate._onImmediate (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\tmpwiu77bx8\\lib\\program.js:1:227034)",
+        "process.processImmediate (node:internal/timers:485:21)"
+      ]
+    }
+  ],
+  "/ASHCDKNagScanner/cfn_test--insecure-s3.yaml/BadBucketPolicy": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "BadBucketPolicy"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "aws:cdk:error",
+      "data": "AwsSolutions-S10: The S3 Bucket or bucket policy does not require requests to use SSL.\n",
+      "trace": [
+        "Annotations.addMessage (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\annotations.js:1:3441)",
+        "Annotations.addError (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\annotations.js:1:2673)",
+        "AnnotationLogger.onNonCompliance (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\cdk-nag\\lib\\nag-logger.js:29:57)",
+        "C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\cdk-nag\\lib\\nag-pack.js:79:55",
+        "Array.forEach (<anonymous>)",
+        "AwsSolutionsChecks.applyRule (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\cdk-nag\\lib\\nag-pack.js:79:38)",
+        "AwsSolutionsChecks.checkStorage (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\cdk-nag\\lib\\packs\\aws-solutions.js:270:14)",
+        "AwsSolutionsChecks.visit (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\cdk-nag\\lib\\packs\\aws-solutions.js:66:18)",
+        "recurse (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\private\\synthesis.js:2:5462)",
+        "recurse (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\private\\synthesis.js:2:5697)",
+        "recurse (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\private\\synthesis.js:2:5697)",
+        "recurse (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\private\\synthesis.js:2:5697)",
+        "invokeAspectsV2 (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\private\\synthesis.js:2:3967)",
+        "synthesize (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\private\\synthesis.js:1:3478)",
+        "App.synth (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\stage.js:1:4636)",
+        "App.synth (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\jsii-kernel-2zrtmc\\node_modules\\aws-cdk-lib\\core\\lib\\app.js:1:4814)",
+        "C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\tmpwiu77bx8\\lib\\program.js:1:55650",
+        "Kernel._Kernel_ensureSync (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\tmpwiu77bx8\\lib\\program.js:1:71267)",
+        "Kernel.invoke (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\tmpwiu77bx8\\lib\\program.js:1:55595)",
+        "KernelHost.processRequest (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\tmpwiu77bx8\\lib\\program.js:1:228006)",
+        "KernelHost.run (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\tmpwiu77bx8\\lib\\program.js:1:226990)",
+        "Immediate._onImmediate (C:\\Users\\DLP-I5~1\\AppData\\Local\\Temp\\tmpwiu77bx8\\lib\\program.js:1:227034)",
+        "process.processImmediate (node:internal/timers:485:21)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1480 @@
+{
+  "name": "ASH Scan 2026-07-09T22:16:34.014483",
+  "description": "Aggregated security scan results",
+  "metadata": {
+    "report_id": "ASH-20260709",
+    "generated_at": "2026-07-09T16:46:34+00:00",
+    "project_name": "ASH",
+    "tool_version": "3.5.4",
+    "description": "Automated Security Helper Aggregated Report Post-processor",
+    "summary_stats": {
+      "suppressed": 0,
+      "critical": 3,
+      "high": 0,
+      "medium": 0,
+      "low": 0,
+      "info": 0,
+      "start": "2026-07-09T16:46:34+00:00",
+      "end": "2026-07-09T16:47:12+00:00",
+      "duration": 38.054629,
+      "total": 3,
+      "actionable": 3,
+      "passed": 0,
+      "failed": 1,
+      "missing": 3,
+      "skipped": 6
+    },
+    "validation_summary": {
+      "scanner_tasks_validation": {
+        "timestamp": "2026-07-09T22:16:52.124265",
+        "expected_count": 1,
+        "actual_count": 1,
+        "missing_count": 0,
+        "has_issues": false,
+        "successfully_retried": 0
+      },
+      "execution_completion_validation": {
+        "timestamp": "2026-07-09T22:17:12.706437",
+        "expected_count": 1,
+        "completed_count": 1,
+        "missing_count": 0,
+        "unexpected_count": 0,
+        "completion_rate": 1.0,
+        "has_issues": false
+      },
+      "result_completeness_validation": {
+        "timestamp": "2026-07-09T22:17:12.706437",
+        "expected_count": 10,
+        "final_count": 10,
+        "missing_count": 0,
+        "unexpected_count": 0,
+        "completeness_rate": 1.0,
+        "has_issues": false
+      }
+    },
+    "execution_discrepancy_report": {}
+  },
+  "ash_config": {
+    "project_name": "ash-scan",
+    "global_settings": {
+      "severity_threshold": "MEDIUM",
+      "ignore_paths": [],
+      "suppressions": []
+    },
+    "fail_on_findings": true,
+    "ash_plugin_modules": [],
+    "external_reports_to_include": [],
+    "build": null,
+    "converters": {
+      "archive": {
+        "name": "archive",
+        "enabled": true,
+        "options": {}
+      },
+      "jupyter": {
+        "name": "jupyter",
+        "enabled": true,
+        "options": {
+          "tool_version": ">=7.16.0,<8.0.0",
+          "install_timeout": 300
+        }
+      }
+    },
+    "scanners": {
+      "bandit": {
+        "name": "bandit",
+        "enabled": true,
+        "options": {
+          "severity_threshold": null,
+          "config_file": null,
+          "confidence_level": "all",
+          "ignore_nosec": false,
+          "excluded_paths": [],
+          "additional_formats": [],
+          "tool_version": ">=1.7.0,<2.0.0",
+          "install_timeout": 300
+        }
+      },
+      "cdk-nag": {
+        "name": "cdk-nag",
+        "enabled": true,
+        "options": {
+          "severity_threshold": null,
+          "nag_packs": {
+            "AwsSolutionsChecks": true,
+            "HIPAASecurityChecks": false,
+            "NIST80053R4Checks": false,
+            "NIST80053R5Checks": false,
+            "PCIDSS321Checks": false
+          },
+          "include_compliant_checks": false
+        }
+      },
+      "cfn-nag": {
+        "name": "cfn-nag",
+        "enabled": true,
+        "options": {
+          "severity_threshold": null
+        }
+      },
+      "checkov": {
+        "name": "checkov",
+        "enabled": true,
+        "options": {
+          "severity_threshold": null,
+          "config_file": null,
+          "skip_path": [],
+          "additional_formats": [
+            "cyclonedx_json"
+          ],
+          "offline": false,
+          "frameworks": [
+            "all"
+          ],
+          "skip_frameworks": [],
+          "tool_version": null,
+          "install_timeout": 300
+        }
+      },
+      "detect-secrets": {
+        "name": "detect-secrets",
+        "enabled": true,
+        "options": {
+          "severity_threshold": null,
+          "baseline_file": null,
+          "scan_settings": {
+            "version": null,
+            "generated_at": null,
+            "plugins_used": [],
+            "filters_used": [],
+            "results": {}
+          },
+          "scan_timeout": 300
+        }
+      },
+      "grype": {
+        "name": "grype",
+        "enabled": true,
+        "options": {
+          "severity_threshold": null,
+          "config_file": null,
+          "offline": false
+        }
+      },
+      "npm-audit": {
+        "name": "npm-audit",
+        "enabled": true,
+        "options": {
+          "severity_threshold": null,
+          "offline": false
+        }
+      },
+      "opengrep": {
+        "name": "opengrep",
+        "enabled": false,
+        "options": {
+          "severity_threshold": null,
+          "config": "p/ci",
+          "exclude": [
+            "*-converted.py",
+            "*_report_result.txt"
+          ],
+          "exclude_rule": [],
+          "severity": [],
+          "metrics": "auto",
+          "offline": false,
+          "patterns": [],
+          "version": "v1.15.1"
+        }
+      },
+      "semgrep": {
+        "name": "semgrep",
+        "enabled": false,
+        "options": {
+          "severity_threshold": null,
+          "config": "p/ci",
+          "exclude": [
+            "*-converted.py",
+            "*_report_result.txt"
+          ],
+          "exclude_rule": [],
+          "severity": [],
+          "metrics": "auto",
+          "offline": false,
+          "tool_version": null,
+          "install_timeout": 300
+        }
+      },
+      "syft": {
+        "name": "syft",
+        "enabled": true,
+        "options": {
+          "severity_threshold": null,
+          "config_file": null,
+          "exclude": [],
+          "additional_outputs": [
+            "syft-table"
+          ]
+        }
+      }
+    },
+    "reporters": {
+      "csv": {
+        "name": "csv",
+        "enabled": true,
+        "options": {},
+        "extension": "csv"
+      },
+      "cyclonedx": {
+        "name": "cyclonedx",
+        "enabled": true,
+        "options": {},
+        "extension": "cdx.json"
+      },
+      "gitlab-cyclonedx": {
+        "name": "gitlab-cyclonedx",
+        "enabled": true,
+        "options": {
+          "category": "production",
+          "package_manager_override": null,
+          "language_override": null,
+          "input_file_path_override": null
+        },
+        "extension": "gl-dependency-scanning-report.cdx.json"
+      },
+      "html": {
+        "name": "html",
+        "enabled": true,
+        "options": {},
+        "extension": "html"
+      },
+      "flat-json": {
+        "name": "flat-json",
+        "enabled": true,
+        "options": {
+          "include_scanner_metrics": true,
+          "include_summary_metrics": true,
+          "include_metadata": true
+        },
+        "extension": "flat.json"
+      },
+      "gitlab-sast": {
+        "name": "gitlab-sast",
+        "enabled": true,
+        "options": {
+          "exclude_suppressed": false
+        },
+        "extension": "gl-sast-report.json"
+      },
+      "github-ghas": {
+        "name": "github-ghas",
+        "enabled": true,
+        "options": {
+          "exclude_suppressed": true
+        },
+        "extension": "ghas.sarif"
+      },
+      "junitxml": {
+        "name": "junitxml",
+        "enabled": true,
+        "options": {
+          "respect_severity_threshold": true
+        },
+        "extension": "junit.xml"
+      },
+      "markdown": {
+        "name": "markdown",
+        "enabled": true,
+        "options": {
+          "include_summary": true,
+          "include_findings_table": false,
+          "include_detailed_findings": true,
+          "max_detailed_findings": 20,
+          "top_hotspots_limit": 10,
+          "use_collapsible_details": true,
+          "compact": false
+        },
+        "extension": "summary.md"
+      },
+      "ocsf": {
+        "name": "ocsf",
+        "enabled": true,
+        "options": {},
+        "extension": "ocsf.json"
+      },
+      "sarif": {
+        "name": "sarif",
+        "enabled": true,
+        "options": {},
+        "extension": "sarif"
+      },
+      "spdx": {
+        "name": "spdx",
+        "enabled": false,
+        "options": {},
+        "extension": "spdx.json"
+      },
+      "text": {
+        "name": "text",
+        "enabled": true,
+        "options": {
+          "include_summary": true,
+          "include_findings_table": false,
+          "include_detailed_findings": false,
+          "max_detailed_findings": 20,
+          "top_hotspots_limit": 20
+        },
+        "extension": "summary.txt"
+      },
+      "yaml": {
+        "name": "yaml",
+        "enabled": false,
+        "options": {},
+        "extension": "yaml"
+      }
+    },
+    "mcp-resource-management": {
+      "max_concurrent_scans": 3,
+      "max_concurrent_tasks": 20,
+      "thread_pool_max_workers": 4,
+      "scan_timeout_seconds": 1800,
+      "operation_timeout_seconds": 180,
+      "shutdown_timeout_seconds": 30,
+      "memory_warning_threshold_mb": 1024,
+      "memory_critical_threshold_mb": 2048,
+      "task_count_warning_threshold": 15,
+      "max_message_size_bytes": 10485760,
+      "max_path_length": 4096,
+      "max_directory_size_mb": 1000,
+      "enable_health_checks": true,
+      "health_check_interval_seconds": 60,
+      "enable_resource_logging": true,
+      "log_resource_operations": false
+    }
+  },
+  "scanner_results": {
+    "bandit": {
+      "status": "SKIPPED",
+      "dependencies_satisfied": true,
+      "excluded": false,
+      "severity_counts": {
+        "suppressed": 0,
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "finding_count": 0,
+      "actionable_finding_count": 0,
+      "suppressed_finding_count": 0,
+      "exit_code": 0,
+      "duration": 0.0
+    },
+    "cfn-nag": {
+      "status": "MISSING",
+      "dependencies_satisfied": true,
+      "excluded": false,
+      "severity_counts": {
+        "suppressed": 0,
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "finding_count": 0,
+      "actionable_finding_count": 0,
+      "suppressed_finding_count": 0,
+      "exit_code": 0,
+      "duration": 0.0
+    },
+    "checkov": {
+      "status": "SKIPPED",
+      "dependencies_satisfied": true,
+      "excluded": false,
+      "severity_counts": {
+        "suppressed": 0,
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "finding_count": 0,
+      "actionable_finding_count": 0,
+      "suppressed_finding_count": 0,
+      "exit_code": 0,
+      "duration": 0.0
+    },
+    "detect-secrets": {
+      "status": "SKIPPED",
+      "dependencies_satisfied": true,
+      "excluded": false,
+      "severity_counts": {
+        "suppressed": 0,
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "finding_count": 0,
+      "actionable_finding_count": 0,
+      "suppressed_finding_count": 0,
+      "exit_code": 0,
+      "duration": 0.0
+    },
+    "grype": {
+      "status": "SKIPPED",
+      "dependencies_satisfied": true,
+      "excluded": false,
+      "severity_counts": {
+        "suppressed": 0,
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "finding_count": 0,
+      "actionable_finding_count": 0,
+      "suppressed_finding_count": 0,
+      "exit_code": 0,
+      "duration": 0.0
+    },
+    "npm-audit": {
+      "status": "SKIPPED",
+      "dependencies_satisfied": true,
+      "excluded": false,
+      "severity_counts": {
+        "suppressed": 0,
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "finding_count": 0,
+      "actionable_finding_count": 0,
+      "suppressed_finding_count": 0,
+      "exit_code": 0,
+      "duration": 0.0
+    },
+    "opengrep": {
+      "status": "MISSING",
+      "dependencies_satisfied": true,
+      "excluded": false,
+      "severity_counts": {
+        "suppressed": 0,
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "finding_count": 0,
+      "actionable_finding_count": 0,
+      "suppressed_finding_count": 0,
+      "exit_code": 0,
+      "duration": 0.0
+    },
+    "semgrep": {
+      "status": "MISSING",
+      "dependencies_satisfied": true,
+      "excluded": false,
+      "severity_counts": {
+        "suppressed": 0,
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "finding_count": 0,
+      "actionable_finding_count": 0,
+      "suppressed_finding_count": 0,
+      "exit_code": 0,
+      "duration": 0.0
+    },
+    "syft": {
+      "status": "SKIPPED",
+      "dependencies_satisfied": true,
+      "excluded": false,
+      "severity_counts": {
+        "suppressed": 0,
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "finding_count": 0,
+      "actionable_finding_count": 0,
+      "suppressed_finding_count": 0,
+      "exit_code": 0,
+      "duration": 0.0
+    },
+    "cdk-nag": {
+      "status": "FAILED",
+      "dependencies_satisfied": true,
+      "excluded": false,
+      "severity_counts": {
+        "suppressed": 0,
+        "critical": 3,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "finding_count": 3,
+      "actionable_finding_count": 3,
+      "suppressed_finding_count": 0,
+      "exit_code": 0,
+      "duration": 20.553646
+    }
+  },
+  "converter_results": {
+    "archive": {
+      "dependencies_satisfied": true,
+      "excluded": false,
+      "converted_paths": []
+    },
+    "jupyter": {
+      "dependencies_satisfied": true,
+      "excluded": false,
+      "converted_paths": []
+    }
+  },
+  "sarif": {
+    "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+      {
+        "tool": {
+          "driver": {
+            "guid": null,
+            "name": "AWS Labs - Automated Security Helper",
+            "organization": "Amazon Web Services",
+            "product": null,
+            "productSuite": null,
+            "shortDescription": null,
+            "fullDescription": null,
+            "fullName": "awslabs/automated-security-helper",
+            "version": "3.5.4",
+            "semanticVersion": null,
+            "dottedQuadFileVersion": null,
+            "releaseDateUtc": null,
+            "downloadUri": "https://github.com/awslabs/automated-security-helper",
+            "informationUri": "https://awslabs.github.io/automated-security-helper",
+            "globalMessageStrings": null,
+            "notifications": [],
+            "rules": [],
+            "taxa": [],
+            "locations": [],
+            "language": "en-US",
+            "contents": [
+              "localizedData",
+              "nonLocalizedData"
+            ],
+            "isComprehensive": false,
+            "localizedDataSemanticVersion": null,
+            "minimumRequiredLocalizedDataSemanticVersion": null,
+            "associatedComponent": null,
+            "translationMetadata": null,
+            "supportedTaxonomies": [],
+            "properties": null
+          },
+          "extensions": [
+            {
+              "guid": null,
+              "name": "cdk-nag",
+              "organization": "Amazon Web Services",
+              "product": null,
+              "productSuite": null,
+              "shortDescription": null,
+              "fullDescription": null,
+              "fullName": "awslabs/automated-security-helper",
+              "version": "3.5.4",
+              "semanticVersion": null,
+              "dottedQuadFileVersion": null,
+              "releaseDateUtc": null,
+              "downloadUri": "https://github.com/awslabs/automated-security-helper",
+              "informationUri": "https://awslabs.github.io/automated-security-helper",
+              "globalMessageStrings": null,
+              "notifications": [],
+              "rules": [
+                {
+                  "id": "AwsSolutions-S1",
+                  "deprecatedIds": null,
+                  "guid": null,
+                  "deprecatedGuids": null,
+                  "name": null,
+                  "deprecatedNames": null,
+                  "shortDescription": {
+                    "text": "The S3 Bucket has server access logs disabled.\n\nException Reason: N/A",
+                    "markdown": null,
+                    "properties": null
+                  },
+                  "fullDescription": {
+                    "text": "The S3 Bucket has server access logs disabled.\n\nException Reason: N/A",
+                    "markdown": null,
+                    "properties": null
+                  },
+                  "messageStrings": null,
+                  "defaultConfiguration": null,
+                  "helpUri": "https://github.com/cdklabs/cdk-nag/blob/main/RULES.md#errors",
+                  "help": null,
+                  "relationships": [],
+                  "properties": {
+                    "tags": [
+                      "tool_name::cdk-nag",
+                      "tool_type::ScannerToolType.IAC"
+                    ],
+                    "rule_level": "Error",
+                    "rule_info": "The S3 Bucket has server access logs disabled."
+                  }
+                },
+                {
+                  "id": "AwsSolutions-S10",
+                  "deprecatedIds": null,
+                  "guid": null,
+                  "deprecatedGuids": null,
+                  "name": null,
+                  "deprecatedNames": null,
+                  "shortDescription": {
+                    "text": "The S3 Bucket or bucket policy does not require requests to use SSL.\n\nException Reason: N/A",
+                    "markdown": null,
+                    "properties": null
+                  },
+                  "fullDescription": {
+                    "text": "The S3 Bucket or bucket policy does not require requests to use SSL.\n\nException Reason: N/A",
+                    "markdown": null,
+                    "properties": null
+                  },
+                  "messageStrings": null,
+                  "defaultConfiguration": null,
+                  "helpUri": "https://github.com/cdklabs/cdk-nag/blob/main/RULES.md#errors",
+                  "help": null,
+                  "relationships": [],
+                  "properties": {
+                    "tags": [
+                      "tool_name::cdk-nag",
+                      "tool_type::ScannerToolType.IAC"
+                    ],
+                    "rule_level": "Error",
+                    "rule_info": "The S3 Bucket or bucket policy does not require requests to use SSL."
+                  }
+                }
+              ],
+              "taxa": [],
+              "locations": [],
+              "language": "en-US",
+              "contents": [
+                "localizedData",
+                "nonLocalizedData"
+              ],
+              "isComprehensive": false,
+              "localizedDataSemanticVersion": null,
+              "minimumRequiredLocalizedDataSemanticVersion": null,
+              "associatedComponent": null,
+              "translationMetadata": null,
+              "supportedTaxonomies": [],
+              "properties": {
+                "tags": [
+                  "cdk-nag"
+                ],
+                "scanner_details": {
+                  "tool_name": "cdk-nag",
+                  "tool_version": "3.5.4",
+                  "tool_invocation": {
+                    "start_time": "2026-07-09T16:46:52.126015+00:00",
+                    "end_time": "2026-07-09T16:47:12.679661+00:00"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": null
+        },
+        "invocations": [
+          {
+            "commandLine": "ash",
+            "arguments": [
+              "--scanner",
+              "cdk-nag",
+              "--source-dir",
+              "D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test"
+            ],
+            "responseFiles": null,
+            "startTimeUtc": "2026-07-09T16:46:52.126015Z",
+            "endTimeUtc": "2026-07-09T16:47:12.679661Z",
+            "exitCode": 0,
+            "ruleConfigurationOverrides": [],
+            "notificationConfigurationOverrides": [],
+            "toolExecutionNotifications": [],
+            "toolConfigurationNotifications": [],
+            "exitCodeDescription": "",
+            "exitSignalName": null,
+            "exitSignalNumber": null,
+            "processStartFailureMessage": null,
+            "executionSuccessful": true,
+            "machine": null,
+            "account": null,
+            "processId": null,
+            "executableLocation": null,
+            "workingDirectory": {
+              "uri": "D:/Dhanush/Custom_Agents/ash-security-platform-test/ash-security-platform-test",
+              "uriBaseId": null,
+              "index": -1,
+              "description": null,
+              "properties": null
+            },
+            "environmentVariables": null,
+            "stdin": null,
+            "stdout": null,
+            "stderr": null,
+            "stdoutStderr": null,
+            "properties": {
+              "tags": [],
+              "tool": {
+                "driver": {
+                  "guid": null,
+                  "name": "cdk-nag",
+                  "organization": "Amazon Web Services",
+                  "product": null,
+                  "productSuite": null,
+                  "shortDescription": null,
+                  "fullDescription": null,
+                  "fullName": "awslabs/automated-security-helper",
+                  "version": "3.5.4",
+                  "semanticVersion": null,
+                  "dottedQuadFileVersion": null,
+                  "releaseDateUtc": null,
+                  "downloadUri": "https://github.com/awslabs/automated-security-helper",
+                  "informationUri": "https://awslabs.github.io/automated-security-helper",
+                  "globalMessageStrings": null,
+                  "notifications": [],
+                  "rules": [
+                    {
+                      "id": "AwsSolutions-S1",
+                      "deprecatedIds": null,
+                      "guid": null,
+                      "deprecatedGuids": null,
+                      "name": null,
+                      "deprecatedNames": null,
+                      "shortDescription": {
+                        "text": "The S3 Bucket has server access logs disabled.\n\nException Reason: N/A",
+                        "markdown": null,
+                        "properties": null
+                      },
+                      "fullDescription": {
+                        "text": "The S3 Bucket has server access logs disabled.\n\nException Reason: N/A",
+                        "markdown": null,
+                        "properties": null
+                      },
+                      "messageStrings": null,
+                      "defaultConfiguration": null,
+                      "helpUri": "https://github.com/cdklabs/cdk-nag/blob/main/RULES.md#errors",
+                      "help": null,
+                      "relationships": [],
+                      "properties": {
+                        "tags": [
+                          "tool_name::cdk-nag",
+                          "tool_type::ScannerToolType.IAC"
+                        ],
+                        "rule_level": "Error",
+                        "rule_info": "The S3 Bucket has server access logs disabled."
+                      }
+                    },
+                    {
+                      "id": "AwsSolutions-S10",
+                      "deprecatedIds": null,
+                      "guid": null,
+                      "deprecatedGuids": null,
+                      "name": null,
+                      "deprecatedNames": null,
+                      "shortDescription": {
+                        "text": "The S3 Bucket or bucket policy does not require requests to use SSL.\n\nException Reason: N/A",
+                        "markdown": null,
+                        "properties": null
+                      },
+                      "fullDescription": {
+                        "text": "The S3 Bucket or bucket policy does not require requests to use SSL.\n\nException Reason: N/A",
+                        "markdown": null,
+                        "properties": null
+                      },
+                      "messageStrings": null,
+                      "defaultConfiguration": null,
+                      "helpUri": "https://github.com/cdklabs/cdk-nag/blob/main/RULES.md#errors",
+                      "help": null,
+                      "relationships": [],
+                      "properties": {
+                        "tags": [
+                          "tool_name::cdk-nag",
+                          "tool_type::ScannerToolType.IAC"
+                        ],
+                        "rule_level": "Error",
+                        "rule_info": "The S3 Bucket or bucket policy does not require requests to use SSL."
+                      }
+                    }
+                  ],
+                  "taxa": [],
+                  "locations": [],
+                  "language": "en-US",
+                  "contents": [
+                    "localizedData",
+                    "nonLocalizedData"
+                  ],
+                  "isComprehensive": false,
+                  "localizedDataSemanticVersion": null,
+                  "minimumRequiredLocalizedDataSemanticVersion": null,
+                  "associatedComponent": null,
+                  "translationMetadata": null,
+                  "supportedTaxonomies": [],
+                  "properties": {
+                    "tags": [
+                      "cdk-nag"
+                    ],
+                    "scanner_details": {
+                      "tool_name": "cdk-nag",
+                      "tool_version": "3.5.4",
+                      "tool_invocation": {
+                        "start_time": "2026-07-09T16:46:52.126015+00:00",
+                        "end_time": "2026-07-09T16:47:12.679661+00:00"
+                      }
+                    }
+                  }
+                },
+                "extensions": [],
+                "properties": null
+              }
+            }
+          }
+        ],
+        "conversion": null,
+        "language": "en-US",
+        "versionControlProvenance": [],
+        "originalUriBaseIds": null,
+        "artifacts": null,
+        "logicalLocations": [],
+        "graphs": [],
+        "results": [
+          {
+            "ruleId": "AwsSolutions-S1",
+            "ruleIndex": -1,
+            "rule": null,
+            "kind": "fail",
+            "level": "error",
+            "message": {
+              "text": "The S3 Bucket has server access logs disabled.\n\nException Reason: N/A",
+              "markdown": null,
+              "id": null,
+              "arguments": [],
+              "properties": null
+            },
+            "analysisTarget": {
+              "uri": "cfn_test/insecure-s3.yaml",
+              "uriBaseId": null,
+              "index": -1,
+              "description": null,
+              "properties": null
+            },
+            "locations": [
+              {
+                "id": 1,
+                "physicalLocation": {
+                  "address": null,
+                  "artifactLocation": {
+                    "uri": "cfn_test/insecure-s3.yaml",
+                    "uriBaseId": null,
+                    "index": -1,
+                    "description": null,
+                    "properties": null
+                  },
+                  "region": {
+                    "startLine": 5,
+                    "startColumn": 2,
+                    "endLine": 5,
+                    "endColumn": 11,
+                    "charOffset": -1,
+                    "charLength": null,
+                    "byteOffset": -1,
+                    "byteLength": null,
+                    "snippet": {
+                      "text": "Resources:\n  BadBucket:\n    Properties:\n      BucketEncryption:\n        ServerSideEncryptionConfiguration: []\n    Type: AWS::S3::Bucket\n",
+                      "binary": null,
+                      "rendered": null,
+                      "properties": null
+                    },
+                    "message": null,
+                    "sourceLanguage": null,
+                    "properties": null
+                  },
+                  "contextRegion": null,
+                  "properties": null
+                },
+                "logicalLocations": [],
+                "message": null,
+                "annotations": [],
+                "relationships": [],
+                "properties": null
+              }
+            ],
+            "guid": null,
+            "correlationGuid": null,
+            "occurrenceCount": null,
+            "partialFingerprints": null,
+            "fingerprints": null,
+            "stacks": [],
+            "codeFlows": [],
+            "graphs": [],
+            "graphTraversals": [],
+            "relatedLocations": [],
+            "suppressions": null,
+            "baselineState": null,
+            "rank": -1.0,
+            "attachments": [],
+            "hostedViewerUri": null,
+            "workItemUris": null,
+            "provenance": null,
+            "fixes": [],
+            "taxa": [],
+            "webRequest": null,
+            "webResponse": null,
+            "properties": {
+              "tags": [
+                "aws",
+                "cdk",
+                "cdk-nag",
+                "AwsSolutions",
+                "AwsSolutions-S1",
+                "BadBucket",
+                "AWS::S3::Bucket",
+                "tool_name::cdk-nag",
+                "tool_type::IAC"
+              ],
+              "cdk_nag_finding": {
+                "rule_id": "AwsSolutions-S1",
+                "resource_id": "ASHCDKNagScanner/cfn_test--insecure-s3.yaml/BadBucket",
+                "compliance": "Non-Compliant",
+                "exception_reason": "N/A",
+                "rule_level": "Error",
+                "rule_info": "The S3 Bucket has server access logs disabled."
+              },
+              "cfn_resource": {
+                "Resources": {
+                  "BadBucket": {
+                    "Type": "AWS::S3::Bucket",
+                    "Properties": {
+                      "BucketEncryption": {
+                        "ServerSideEncryptionConfiguration": []
+                      }
+                    }
+                  }
+                }
+              },
+              "scanner_name": "cdk-nag",
+              "scanner_version": "3.5.4",
+              "scanner_details": {
+                "tool_name": "cdk-nag",
+                "tool_version": "3.5.4",
+                "tool_invocation": {
+                  "start_time": "2026-07-09T16:46:52.126015+00:00",
+                  "end_time": "2026-07-09T16:47:12.679661+00:00"
+                }
+              }
+            }
+          },
+          {
+            "ruleId": "AwsSolutions-S10",
+            "ruleIndex": -1,
+            "rule": null,
+            "kind": "fail",
+            "level": "error",
+            "message": {
+              "text": "The S3 Bucket or bucket policy does not require requests to use SSL.\n\nException Reason: N/A",
+              "markdown": null,
+              "id": null,
+              "arguments": [],
+              "properties": null
+            },
+            "analysisTarget": {
+              "uri": "cfn_test/insecure-s3.yaml",
+              "uriBaseId": null,
+              "index": -1,
+              "description": null,
+              "properties": null
+            },
+            "locations": [
+              {
+                "id": 1,
+                "physicalLocation": {
+                  "address": null,
+                  "artifactLocation": {
+                    "uri": "cfn_test/insecure-s3.yaml",
+                    "uriBaseId": null,
+                    "index": -1,
+                    "description": null,
+                    "properties": null
+                  },
+                  "region": {
+                    "startLine": 5,
+                    "startColumn": 2,
+                    "endLine": 5,
+                    "endColumn": 11,
+                    "charOffset": -1,
+                    "charLength": null,
+                    "byteOffset": -1,
+                    "byteLength": null,
+                    "snippet": {
+                      "text": "Resources:\n  BadBucket:\n    Properties:\n      BucketEncryption:\n        ServerSideEncryptionConfiguration: []\n    Type: AWS::S3::Bucket\n",
+                      "binary": null,
+                      "rendered": null,
+                      "properties": null
+                    },
+                    "message": null,
+                    "sourceLanguage": null,
+                    "properties": null
+                  },
+                  "contextRegion": null,
+                  "properties": null
+                },
+                "logicalLocations": [],
+                "message": null,
+                "annotations": [],
+                "relationships": [],
+                "properties": null
+              }
+            ],
+            "guid": null,
+            "correlationGuid": null,
+            "occurrenceCount": null,
+            "partialFingerprints": null,
+            "fingerprints": null,
+            "stacks": [],
+            "codeFlows": [],
+            "graphs": [],
+            "graphTraversals": [],
+            "relatedLocations": [],
+            "suppressions": null,
+            "baselineState": null,
+            "rank": -1.0,
+            "attachments": [],
+            "hostedViewerUri": null,
+            "workItemUris": null,
+            "provenance": null,
+            "fixes": [],
+            "taxa": [],
+            "webRequest": null,
+            "webResponse": null,
+            "properties": {
+              "tags": [
+                "aws",
+                "cdk",
+                "cdk-nag",
+                "AwsSolutions",
+                "AwsSolutions-S10",
+                "BadBucket",
+                "AWS::S3::Bucket",
+                "tool_name::cdk-nag",
+                "tool_type::IAC"
+              ],
+              "cdk_nag_finding": {
+                "rule_id": "AwsSolutions-S10",
+                "resource_id": "ASHCDKNagScanner/cfn_test--insecure-s3.yaml/BadBucket",
+                "compliance": "Non-Compliant",
+                "exception_reason": "N/A",
+                "rule_level": "Error",
+                "rule_info": "The S3 Bucket or bucket policy does not require requests to use SSL."
+              },
+              "cfn_resource": {
+                "Resources": {
+                  "BadBucket": {
+                    "Type": "AWS::S3::Bucket",
+                    "Properties": {
+                      "BucketEncryption": {
+                        "ServerSideEncryptionConfiguration": []
+                      }
+                    }
+                  }
+                }
+              },
+              "scanner_name": "cdk-nag",
+              "scanner_version": "3.5.4",
+              "scanner_details": {
+                "tool_name": "cdk-nag",
+                "tool_version": "3.5.4",
+                "tool_invocation": {
+                  "start_time": "2026-07-09T16:46:52.126015+00:00",
+                  "end_time": "2026-07-09T16:47:12.679661+00:00"
+                }
+              }
+            }
+          },
+          {
+            "ruleId": "AwsSolutions-S10",
+            "ruleIndex": -1,
+            "rule": null,
+            "kind": "fail",
+            "level": "error",
+            "message": {
+              "text": "The S3 Bucket or bucket policy does not require requests to use SSL.\n\nException Reason: N/A",
+              "markdown": null,
+              "id": null,
+              "arguments": [],
+              "properties": null
+            },
+            "analysisTarget": {
+              "uri": "cfn_test/insecure-s3.yaml",
+              "uriBaseId": null,
+              "index": -1,
+              "description": null,
+              "properties": null
+            },
+            "locations": [
+              {
+                "id": 1,
+                "physicalLocation": {
+                  "address": null,
+                  "artifactLocation": {
+                    "uri": "cfn_test/insecure-s3.yaml",
+                    "uriBaseId": null,
+                    "index": -1,
+                    "description": null,
+                    "properties": null
+                  },
+                  "region": {
+                    "startLine": 11,
+                    "startColumn": 2,
+                    "endLine": 11,
+                    "endColumn": 17,
+                    "charOffset": -1,
+                    "charLength": null,
+                    "byteOffset": -1,
+                    "byteLength": null,
+                    "snippet": {
+                      "text": "Resources:\n  BadBucketPolicy:\n    Properties:\n      Bucket:\n        Ref: BadBucket\n      PolicyDocument:\n        Statement:\n          - Action: s3:*\n            Effect: Allow\n            Principal: '*'\n            Resource:\n              - Fn::GetAtt:\n                  - BadBucket\n                  - Arn\n              - Fn::Sub: ${BadBucket.Arn}/*\n        Version: '2012-10-17'\n    Type: AWS::S3::BucketPolicy\n",
+                      "binary": null,
+                      "rendered": null,
+                      "properties": null
+                    },
+                    "message": null,
+                    "sourceLanguage": null,
+                    "properties": null
+                  },
+                  "contextRegion": null,
+                  "properties": null
+                },
+                "logicalLocations": [],
+                "message": null,
+                "annotations": [],
+                "relationships": [],
+                "properties": null
+              }
+            ],
+            "guid": null,
+            "correlationGuid": null,
+            "occurrenceCount": null,
+            "partialFingerprints": null,
+            "fingerprints": null,
+            "stacks": [],
+            "codeFlows": [],
+            "graphs": [],
+            "graphTraversals": [],
+            "relatedLocations": [],
+            "suppressions": null,
+            "baselineState": null,
+            "rank": -1.0,
+            "attachments": [],
+            "hostedViewerUri": null,
+            "workItemUris": null,
+            "provenance": null,
+            "fixes": [],
+            "taxa": [],
+            "webRequest": null,
+            "webResponse": null,
+            "properties": {
+              "tags": [
+                "aws",
+                "cdk",
+                "cdk-nag",
+                "AwsSolutions",
+                "AwsSolutions-S10",
+                "BadBucketPolicy",
+                "AWS::S3::BucketPolicy",
+                "tool_name::cdk-nag",
+                "tool_type::IAC"
+              ],
+              "cdk_nag_finding": {
+                "rule_id": "AwsSolutions-S10",
+                "resource_id": "ASHCDKNagScanner/cfn_test--insecure-s3.yaml/BadBucketPolicy",
+                "compliance": "Non-Compliant",
+                "exception_reason": "N/A",
+                "rule_level": "Error",
+                "rule_info": "The S3 Bucket or bucket policy does not require requests to use SSL."
+              },
+              "cfn_resource": {
+                "Resources": {
+                  "BadBucketPolicy": {
+                    "Type": "AWS::S3::BucketPolicy",
+                    "Properties": {
+                      "Bucket": {
+                        "Ref": "BadBucket"
+                      },
+                      "PolicyDocument": {
+                        "Version": "2012-10-17",
+                        "Statement": [
+                          {
+                            "Effect": "Allow",
+                            "Principal": "*",
+                            "Action": "s3:*",
+                            "Resource": [
+                              {
+                                "Fn::GetAtt": [
+                                  "BadBucket",
+                                  "Arn"
+                                ]
+                              },
+                              {
+                                "Fn::Sub": "${BadBucket.Arn}/*"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              "scanner_name": "cdk-nag",
+              "scanner_version": "3.5.4",
+              "scanner_details": {
+                "tool_name": "cdk-nag",
+                "tool_version": "3.5.4",
+                "tool_invocation": {
+                  "start_time": "2026-07-09T16:46:52.126015+00:00",
+                  "end_time": "2026-07-09T16:47:12.679661+00:00"
+                }
+              }
+            }
+          }
+        ],
+        "automationDetails": null,
+        "runAggregates": [],
+        "baselineGuid": null,
+        "redactionTokens": [],
+        "defaultEncoding": null,
+        "defaultSourceLanguage": null,
+        "newlineSequences": [
+          "\r\n",
+          "\n"
+        ],
+        "columnKind": null,
+        "externalPropertyFileReferences": null,
+        "threadFlowLocations": [],
+        "taxonomies": [],
+        "addresses": [],
+        "translations": [],
+        "policies": [],
+        "webRequests": [],
+        "webResponses": [],
+        "specialLocations": null,
+        "properties": {
+          "tags": []
+        }
+      }
+    ],
+    "inlineExternalProperties": [],
+    "properties": {
+      "tags": []
+    }
+  },
+  "cyclonedx": {
+    "$schema": null,
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": null,
+    "version": 1,
+    "metadata": null,
+    "components": null,
+    "services": null,
+    "externalReferences": null,
+    "dependencies": null,
+    "compositions": null,
+    "vulnerabilities": null,
+    "annotations": null,
+    "formulation": null,
+    "declarations": null,
+    "definitions": null,
+    "properties": null,
+    "signature": null
+  },
+  "additional_reports": {
+    "bandit": {
+      "None": {
+        "scanner_name": "bandit",
+        "status": "SKIPPED",
+        "excluded": true,
+        "raw_results": null
+      }
+    },
+    "cfn-nag": {
+      "None": {
+        "scanner_name": "cfn-nag",
+        "status": "MISSING",
+        "dependencies_satisfied": false,
+        "raw_results": null
+      }
+    },
+    "checkov": {
+      "None": {
+        "scanner_name": "checkov",
+        "status": "SKIPPED",
+        "excluded": true,
+        "raw_results": null
+      }
+    },
+    "detect-secrets": {
+      "None": {
+        "scanner_name": "detect-secrets",
+        "status": "SKIPPED",
+        "excluded": true,
+        "raw_results": null
+      }
+    },
+    "grype": {
+      "None": {
+        "scanner_name": "grype",
+        "status": "SKIPPED",
+        "excluded": true,
+        "raw_results": null
+      }
+    },
+    "npm-audit": {
+      "None": {
+        "scanner_name": "npm-audit",
+        "status": "SKIPPED",
+        "excluded": true,
+        "raw_results": null
+      }
+    },
+    "opengrep": {
+      "None": {
+        "scanner_name": "opengrep",
+        "status": "MISSING",
+        "dependencies_satisfied": false,
+        "raw_results": null
+      }
+    },
+    "semgrep": {
+      "None": {
+        "scanner_name": "semgrep",
+        "status": "MISSING",
+        "dependencies_satisfied": false,
+        "raw_results": null
+      }
+    },
+    "syft": {
+      "None": {
+        "scanner_name": "syft",
+        "status": "SKIPPED",
+        "excluded": true,
+        "raw_results": null
+      }
+    },
+    "cdk-nag": {
+      "source": {
+        "scanner_name": "cdk-nag",
+        "target": "D:\\Dhanush\\Custom_Agents\\ash-security-platform-test\\ash-security-platform-test",
+        "target_type": "source",
+        "exit_code": 0,
+        "finding_count": 3,
+        "start_time": "2026-07-09T16:46:52.126015Z",
+        "end_time": "2026-07-09T16:47:12.679661Z",
+        "duration": 20.553646,
+        "severity_counts": {
+          "suppressed": 0,
+          "critical": 3,
+          "high": 0,
+          "medium": 0,
+          "low": 0,
+          "info": 0
+        },
+        "status": "FAILED"
+      }
+    }
+  },
+  "validation_checkpoints": [
+    {
+      "checkpoint_name": "task_queue_validation",
+      "timestamp": "2026-07-09T22:16:52.124265",
+      "expected_scanners": [
+        "cdk-nag"
+      ],
+      "actual_scanners": [
+        "cdk-nag"
+      ],
+      "discrepancies": [],
+      "errors": [],
+      "metadata": {
+        "expected_count": 1,
+        "queued_count": 1,
+        "queue_items": 1
+      }
+    },
+    {
+      "checkpoint_name": "execution_completion",
+      "timestamp": "2026-07-09T22:17:12.706437",
+      "expected_scanners": [
+        "cdk-nag"
+      ],
+      "actual_scanners": [
+        "cdk-nag"
+      ],
+      "discrepancies": [],
+      "errors": [],
+      "metadata": {
+        "expected_count": 1,
+        "completed_count": 1,
+        "completion_rate": 1.0
+      }
+    },
+    {
+      "checkpoint_name": "result_completeness",
+      "timestamp": "2026-07-09T22:17:12.706437",
+      "expected_scanners": [
+        "bandit",
+        "cdk-nag",
+        "cfn-nag",
+        "checkov",
+        "detect-secrets",
+        "grype",
+        "npm-audit",
+        "opengrep",
+        "semgrep",
+        "syft"
+      ],
+      "actual_scanners": [
+        "bandit",
+        "cdk-nag",
+        "cfn-nag",
+        "checkov",
+        "detect-secrets",
+        "grype",
+        "npm-audit",
+        "opengrep",
+        "semgrep",
+        "syft"
+      ],
+      "discrepancies": [],
+      "errors": [],
+      "metadata": {
+        "expected_count": 10,
+        "executed_count": 10,
+        "completeness_rate": 1.0
+      }
+    }
+  ],
+  "used_suppressions": []
+}
