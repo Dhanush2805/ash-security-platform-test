@@ -10,6 +10,8 @@ print('success')
 
 
 
-import hashlib
+from flask import Flask
 
-hashlib.sha224(b"hello").hexdigest()
+app = Flask(__name__)
+
+app.run(debug=True)
