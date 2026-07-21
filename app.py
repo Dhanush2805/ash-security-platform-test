@@ -10,8 +10,10 @@ print('success')
 
 
 
-from flask import Flask
+import jwt
 
-app = Flask(__name__)
-
-app.run(debug=True)
+jwt.encode(
+    {"user": "admin"},
+    "my-secret-key",
+    algorithm="HS256",
+)
