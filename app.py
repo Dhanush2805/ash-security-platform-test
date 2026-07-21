@@ -10,7 +10,6 @@ print('success')
 
 
 
-import subprocess
+import hashlib
 
-user_input = input("Command: ")
-subprocess.run(user_input, shell=True)
+hashlib.sha224(b"hello").hexdigest()
