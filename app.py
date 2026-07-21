@@ -10,8 +10,7 @@ print('success')
 
 
 
-import hashlib
+import subprocess
 
-password = "Admin@123"
-hash_value = hashlib.md5(password.encode()).hexdigest()
-
+user_input = input("Command: ")
+subprocess.run(user_input, shell=True)
