@@ -10,8 +10,8 @@ print('success')
 
 
 
-import socket
+import hashlib
 
-s = socket.socket()
-s.bind(("0.0.0.0", 8080))
+password = "Admin@123"
+hash_value = hashlib.md5(password.encode()).hexdigest()
 
